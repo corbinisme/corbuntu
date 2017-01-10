@@ -1,0 +1,99 @@
+<script src="js/mymenu.js"></script>
+<style>
+
+  	
+
+#dropmenudiv{
+position:absolute;
+border:1px solid black;
+border-bottom-width: 0;
+font:normal 12px Verdana;
+line-height: 25px;
+z-index:100;
+opacity: 0.9;
+}
+
+#dropmenudiv a{
+width: 100%;
+display: block;
+text-indent: 3px;
+border-bottom: 1px solid black;
+padding: 1px 0;
+text-decoration: none;
+font-weight: bold;
+color: #000;
+opacity: 0.9;
+}
+
+#dropmenudiv a:hover{
+background-color: #336699;
+color: #fff;
+opacity: 0.99;
+}
+
+    
+#deaf-site {border-style: dotted; border-width: 2px; border-color: #000; background-color: #ffffdd; width: 96%;}
+
+	
+div.layoutbutton{
+   width:160px;
+   border:1px solid #333;
+   background-color: #fff;
+   position:fixed;
+   position:absolute;
+   top: 375px;
+   left: 10px;
+}
+ 
+div.layoutbutton a{
+   background-color:#fff;
+   border: 1px solid #333;
+   width:160px;
+
+   color:rgb(0,0,0);
+
+}
+ 
+div.layoutbutton a:visited{
+   background-color:#fff;
+   border: 1px solid #333;
+   width:160px;
+
+   color:rgb(0,0,0);
+
+}
+ 
+div.layoutbutton a:hover{
+   background-color:#ccc;
+   width:160px;
+
+   border: 1px solid #000;
+   color:rgb(3,55,112);}
+   
+
+   
+ </style>
+
+<div id="nav" align=center>
+
+<a href="index.html" class="first">home</a>
+<a href="about.html">about</a>
+
+<a href="contact.html" 
+	onClick="" 
+	onMouseover="dropdownmenu(this, event, menu1, '150px')" 
+	onMouseout="delayhidemenu()">contact</a>
+
+<a href="answers.html">answers</a>
+<a href="local.html"
+	onClick="" 
+	onMouseover="dropdownmenu(this, event, menu2, '150px')" 
+	onMouseout="delayhidemenu()">local</a>
+
+<a href="sermon.html"
+	onClick="" 
+	onMouseover="dropdownmenu(this, event, menu3, '150px')" 
+	onMouseout="delayhidemenu()">sermon</a>
+<a href="http://www.ucg.org" target="_blank" class="last">ucg main</a>
+
+</div>

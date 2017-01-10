@@ -1,0 +1,214 @@
+<script src="../asset/js/jquery1.4.2min.js" type="text/javascript"></script> 
+
+<script>
+$(document).ready(function(){
+	$(".pictureFolder a").each(function(){
+		var title = $(this).html();
+		
+		$(this).html("");
+		var path = $(this).attr("load");
+		$(this).attr("href", "javascript:void(0)");
+		
+		var thumb = path.substring(31, path.length)
+		
+		var $titleSpan = $(document.createElement("span"));
+		$titleSpan.html(title);
+		
+		var $images = $(document.createElement("img"));
+		$images.attr("src", "../../portfolio/manmade/thumbs/"+thumb);
+		
+		$(this).append($images);
+		$(this).append($titleSpan);
+		
+	});	
+})
+
+</script>
+<div class="pictureFolder">
+
+<a load="../../portfolio/manmade/images/01.jpg">01.jpg</a>
+<a load="../../portfolio/manmade/images/02.jpg">02.jpg</a>
+<a load="../../portfolio/manmade/images/03.jpg">03.jpg</a>
+
+<a load="../../portfolio/manmade/images/524867-R1-15-9A.jpg">524867-R1-15-9A.jpg</a>
+<a load="../../portfolio/manmade/images/528169-R1-04-20A.jpg">528169-R1-04-20A.jpg</a>
+<a load="../../portfolio/manmade/images/528169-R1-05-19A.jpg">528169-R1-05-19A.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_0070.jpg">IMG_0070.jpg</a>
+
+<a load="../../portfolio/manmade/images/IMG_0107.jpg">IMG_0107.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_0138.jpg">IMG_0138.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_0244.jpg">IMG_0244.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_0247.jpg">IMG_0247.jpg</a>
+
+<a load="../../portfolio/manmade/images/IMG_0262.jpg">IMG_0262.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_0367.jpg">IMG_0367.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_0385.jpg">IMG_0385.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_0394.jpg">IMG_0394.jpg</a>
+
+<a load="../../portfolio/manmade/images/IMG_0404.jpg">IMG_0404.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_0464.jpg">IMG_0464.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_0733.jpg">IMG_0733.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_0735.jpg">IMG_0735.jpg</a>
+
+<a load="../../portfolio/manmade/images/IMG_0737.jpg">IMG_0737.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_0740.jpg">IMG_0740.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_1067.jpg">IMG_1067.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_1158.jpg">IMG_1158.jpg</a>
+
+<a load="../../portfolio/manmade/images/IMG_1162.jpg">IMG_1162.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_2559.jpg">IMG_2559.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_2590.jpg">IMG_2590.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_3161.jpg">IMG_3161.jpg</a>
+
+<a load="../../portfolio/manmade/images/IMG_3489.jpg">IMG_3489.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_4380.jpg">IMG_4380.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_4797.jpg">IMG_4797.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_4836.jpg">IMG_4836.jpg</a>
+
+<a load="../../portfolio/manmade/images/IMG_4893.jpg">IMG_4893.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_4897.jpg">IMG_4897.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_5091.jpg">IMG_5091.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_5252.jpg">IMG_5252.jpg</a>
+
+<a load="../../portfolio/manmade/images/IMG_5256.jpg">IMG_5256.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_5271.jpg">IMG_5271.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_5280.jpg">IMG_5280.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_5284.jpg">IMG_5284.jpg</a>
+
+<a load="../../portfolio/manmade/images/IMG_5429.jpg">IMG_5429.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_6679.jpg">IMG_6679.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_7709.jpg">IMG_7709.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_8014.jpg">IMG_8014.jpg</a>
+
+<a load="../../portfolio/manmade/images/IMG_8015.jpg">IMG_8015.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_8016.jpg">IMG_8016.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_8033.jpg">IMG_8033.jpg</a>
+<a load="../../portfolio/manmade/images/IMG_8124.jpg">IMG_8124.jpg</a>
+
+<a load="../../portfolio/manmade/images/IMG_8159.jpg">IMG_8159.jpg</a>
+<a load="../../portfolio/manmade/images/blue1.jpg">blue1.jpg</a>
+<a load="../../portfolio/manmade/images/blue2.jpg">blue2.jpg</a>
+<a load="../../portfolio/manmade/images/blue4.jpg">blue4.jpg</a>
+
+<a load="../../portfolio/manmade/images/blue8.jpg">blue8.jpg</a>
+<a load="../../portfolio/manmade/images/blueness.jpg">blueness.jpg</a>
+<a load="../../portfolio/manmade/images/bridge%20small.jpg">bridge small.jpg</a>
+<a load="../../portfolio/manmade/images/building%20reflect.jpg">building reflect.jpg</a>
+
+<a load="../../portfolio/manmade/images/chair.jpg">chair.jpg</a>
+<a load="../../portfolio/manmade/images/chic.jpg">chic.jpg</a>
+<a load="../../portfolio/manmade/images/chicago2.jpg">chicago2.jpg</a>
+<a load="../../portfolio/manmade/images/child3.jpg">child3.jpg</a>
+
+<a load="../../portfolio/manmade/images/cinci1.jpg">cinci1.jpg</a>
+<a load="../../portfolio/manmade/images/cini2.jpg">cini2.jpg</a>
+<a load="../../portfolio/manmade/images/hydrant.jpg">hydrant.jpg</a>
+<a load="../../portfolio/manmade/images/pipes.jpg">pipes.jpg</a>
+
+<a load="../../portfolio/manmade/images/road.jpg">road.jpg</a>
+<a load="../../portfolio/manmade/images/rust.jpg">rust.jpg</a>
+<a load="../../portfolio/manmade/images/rusty%20thingy.jpg">rusty thingy.jpg</a>
+<a load="../../portfolio/manmade/images/sculpt.jpg">sculpt.jpg</a>
+
+<a load="../../portfolio/manmade/images/steps.jpg">steps.jpg</a>
+<a load="../../portfolio/manmade/images/texture.jpg">texture.jpg</a>
+
+
+
+</div>			
+
+
+
+
+<div class="pictureFolder">
+
+<a load="../../portfolio/manmade/images/01.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/01.jpg"><span>01.jpg</span></a>
+<a load="../../portfolio/manmade/images/02.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/02.jpg"><span>02.jpg</span></a>
+<a load="../../portfolio/manmade/images/03.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/03.jpg"><span>03.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/524867-R1-15-9A.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/524867-R1-15-9A.jpg"><span>524867-R1-15-9A.jpg</span></a>
+<a load="../../portfolio/manmade/images/528169-R1-04-20A.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/528169-R1-04-20A.jpg"><span>528169-R1-04-20A.jpg</span></a>
+<a load="../../portfolio/manmade/images/528169-R1-05-19A.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/528169-R1-05-19A.jpg"><span>528169-R1-05-19A.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_0070.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_0070.jpg"><span>IMG_0070.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/IMG_0107.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_0107.jpg"><span>IMG_0107.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_0138.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_0138.jpg"><span>IMG_0138.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_0244.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_0244.jpg"><span>IMG_0244.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_0247.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_0247.jpg"><span>IMG_0247.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/IMG_0262.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_0262.jpg"><span>IMG_0262.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_0367.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_0367.jpg"><span>IMG_0367.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_0385.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_0385.jpg"><span>IMG_0385.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_0394.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_0394.jpg"><span>IMG_0394.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/IMG_0404.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_0404.jpg"><span>IMG_0404.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_0464.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_0464.jpg"><span>IMG_0464.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_0733.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_0733.jpg"><span>IMG_0733.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_0735.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_0735.jpg"><span>IMG_0735.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/IMG_0737.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_0737.jpg"><span>IMG_0737.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_0740.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_0740.jpg"><span>IMG_0740.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_1067.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_1067.jpg"><span>IMG_1067.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_1158.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_1158.jpg"><span>IMG_1158.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/IMG_1162.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_1162.jpg"><span>IMG_1162.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_2559.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_2559.jpg"><span>IMG_2559.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_2590.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_2590.jpg"><span>IMG_2590.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_3161.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_3161.jpg"><span>IMG_3161.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/IMG_3489.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_3489.jpg"><span>IMG_3489.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_4380.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_4380.jpg"><span>IMG_4380.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_4797.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_4797.jpg"><span>IMG_4797.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_4836.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_4836.jpg"><span>IMG_4836.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/IMG_4893.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_4893.jpg"><span>IMG_4893.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_4897.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_4897.jpg"><span>IMG_4897.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_5091.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_5091.jpg"><span>IMG_5091.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_5252.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_5252.jpg"><span>IMG_5252.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/IMG_5256.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_5256.jpg"><span>IMG_5256.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_5271.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_5271.jpg"><span>IMG_5271.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_5280.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_5280.jpg"><span>IMG_5280.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_5284.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_5284.jpg"><span>IMG_5284.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/IMG_5429.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_5429.jpg"><span>IMG_5429.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_6679.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_6679.jpg"><span>IMG_6679.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_7709.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_7709.jpg"><span>IMG_7709.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_8014.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_8014.jpg"><span>IMG_8014.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/IMG_8015.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_8015.jpg"><span>IMG_8015.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_8016.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_8016.jpg"><span>IMG_8016.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_8033.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_8033.jpg"><span>IMG_8033.jpg</span></a>
+<a load="../../portfolio/manmade/images/IMG_8124.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_8124.jpg"><span>IMG_8124.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/IMG_8159.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/IMG_8159.jpg"><span>IMG_8159.jpg</span></a>
+<a load="../../portfolio/manmade/images/blue1.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/blue1.jpg"><span>blue1.jpg</span></a>
+<a load="../../portfolio/manmade/images/blue2.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/blue2.jpg"><span>blue2.jpg</span></a>
+<a load="../../portfolio/manmade/images/blue4.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/blue4.jpg"><span>blue4.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/blue8.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/blue8.jpg"><span>blue8.jpg</span></a>
+<a load="../../portfolio/manmade/images/blueness.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/blueness.jpg"><span>blueness.jpg</span></a>
+<a load="../../portfolio/manmade/images/bridge%20small.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/bridge%20small.jpg"><span>bridge small.jpg</span></a>
+<a load="../../portfolio/manmade/images/building%20reflect.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/building%20reflect.jpg"><span>building reflect.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/chair.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/chair.jpg"><span>chair.jpg</span></a>
+<a load="../../portfolio/manmade/images/chic.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/chic.jpg"><span>chic.jpg</span></a>
+<a load="../../portfolio/manmade/images/chicago2.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/chicago2.jpg"><span>chicago2.jpg</span></a>
+<a load="../../portfolio/manmade/images/child3.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/child3.jpg"><span>child3.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/cinci1.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/cinci1.jpg"><span>cinci1.jpg</span></a>
+<a load="../../portfolio/manmade/images/cini2.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/cini2.jpg"><span>cini2.jpg</span></a>
+<a load="../../portfolio/manmade/images/hydrant.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/hydrant.jpg"><span>hydrant.jpg</span></a>
+<a load="../../portfolio/manmade/images/pipes.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/pipes.jpg"><span>pipes.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/road.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/road.jpg"><span>road.jpg</span></a>
+<a load="../../portfolio/manmade/images/rust.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/rust.jpg"><span>rust.jpg</span></a>
+<a load="../../portfolio/manmade/images/rusty%20thingy.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/rusty%20thingy.jpg"><span>rusty thingy.jpg</span></a>
+<a load="../../portfolio/manmade/images/sculpt.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/sculpt.jpg"><span>sculpt.jpg</span></a>
+
+<a load="../../portfolio/manmade/images/steps.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/steps.jpg"><span>steps.jpg</span></a>
+<a load="../../portfolio/manmade/images/texture.jpg" href="javascript:void(0)"><img src="../../portfolio/manmade/thumbs/texture.jpg"><span>texture.jpg</span></a>
+
+
+
+</div>

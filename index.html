@@ -1,0 +1,693 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>Ubuntu in a Browser</title> 
+    <meta name="description" content="HTML, CSS, JS webapp designed to look like Ubuntu 10.4. A work in progress!">
+    <meta name="keywords" content="CSS, JS, HTML, Ubuntu, Webapp, Corbin, corbuntu">
+    
+    <!-- Facebook page specifics -->
+    <meta property="og:title" content="Corbuntu - Ubuntu in a Browser (sort of)">
+    <meta property="og:description" content="HTML, CSS, JS webapp designed to look like Ubuntu 10.4. A work in progress!">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Corbuntu">
+    <meta property="og:image" content="http://os.corbdesign.com/icon.png">
+
+    <!-- Twitter page specifics -->
+    <meta name="twitter:title" content="Corbuntu - Ubuntu in a Browser (sort of)">
+    <meta name="twitter:description" content="HTML, CSS, JS webapp designed to look like Ubuntu 10.4. A work in progress!">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://os.corbdesign.com">
+    <meta name="twitter:site" content="@likethemammal">
+    <meta name="twitter:image" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Chris Dolphin">
+ 
+<link type="text/css" rel="stylesheet" href="asset/css/common.css" /> 
+<link type="text/css" rel="stylesheet" href="asset/css/ubuntu.css" /> 
+<link type="text/css" rel="stylesheet" href="asset/css/menu.css" /> 
+<link type="text/css" rel="stylesheet" href="asset/css/theme.css" /> 
+
+<!--<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500' rel='stylesheet' type='text/css'>-->
+ 
+<!--<link rel="stylesheet" type="text/css" href="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/help/lib/blueprint/screen.css" media="screen, projection" />-->
+<link rel="stylesheet" type="text/css" href="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/help/lib/blueprint/print.css" media="print" />
+<!--[if lt IE 8]><link rel="stylesheet" href="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/help/lib/blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+
+<link href="music/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css"> 
+/* don't know what to do with this yet */
+
+#draggable3 {left: 150px; top: 40px;}
+#VLC23 {position: absolute; left: 10px; top: 10px}
+</style> 
+<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+ <link type="text/css" href="asset/css/ui-lightness/jquery-ui-1.8.13.custom.css" rel="stylesheet" />	
+
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="css/IE.css" />
+<![endif]--> 
+ 
+ 
+<script type="text/javascript"> 
+var z = 100; //initialize z-index variable
+</script> 
+ 
+<!-- jQuery --> 
+<script src="asset/js/jquery1.4.2min.js" type="text/javascript"></script> 
+<script type="text/javascript" src="asset/js/jquery-ui-1.8.13.custom.min.js"></script>
+ 
+<script type="text/javascript" src="music/js/jquery.jplayer.min.js"></script> 
+<!--<script type="text/javascript" src="music/js/jplayer.playlist.min.js"></script> -->
+
+<!-- main functionality --> 
+<script src="asset/js/ubu.js" type="text/javascript"></script>
+<script src="asset/js/window.js" type="text/javascript"></script>
+<script src="asset/js/create.js" type="text/javascript"></script>
+<script src="asset/js/folder.js" type="text/javascript"></script>
+<script src="asset/js/futureFunctions.js" type="text/javascript"></script>
+<script src="asset/js/countdown.js" type="text/javascript"></script>
+<script src="games/tower.js" type="text/javascript"></script>
+
+<script src="asset/js/iframeResize.js" type="text/javascript"></script>
+
+
+<!--<script src="asset/js/jquery.backstretch.min.js" type="text/javascript"></script>-->
+
+
+<!-- jwizzy -->
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/help/lib/plugins/autoload/jquery.autoload.js"></script>
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/help/lib/plugins/farbtastic/farbtastic.js"></script>
+<link rel="stylesheet" href="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/help/lib/plugins/farbtastic/css/farbtastic.css" type="text/css"/>
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/jquery.wysiwyg.js"></script>
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/plugins/wysiwyg.autoload.js"></script>
+
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/plugins/wysiwyg.rmFormat.js"></script>
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/controls/wysiwyg.colorpicker.js"></script>
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/controls/wysiwyg.image.js"></script>
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/controls/wysiwyg.link.js"></script>
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/controls/wysiwyg.table.js"></script>
+ 
+
+
+<!-- menu scripts --> 
+<script type="text/javascript" src="asset/js/hoverIntent.js"></script> 
+<script type="text/javascript" src="asset/js/superfish.js"></script> 
+ 
+<script type="text/javascript" src="asset/raptor/jquery.raptorize.1.0.js"></script>
+
+
+ 
+</head> 
+ 
+<body class="tundra theme"> 
+ 
+<div class="lookingGlass"> 
+<!-- top panel ///////////////////////////--> 
+ 
+	<ul id="square" style="margin-left:0px"> 
+    <li id="one" class="squares relative"> 
+ 
+ 
+ 	
+<!-- top panel ///////////////////////////--> 
+ 
+    <div class="panelContainer"> 
+    <div class="panel"> 
+        <div class="nav"> 
+           <!-- start nav --> 
+         
+        </div><!-- end nav Div --> 
+    
+        <!-- start quickLaunch --> 
+        <div class="quickLaunch"> 
+            <ul> 
+                <li><a href="javascript:void(0)" class="firefox"><img src="images/firefox.png" /></a></li> 
+                <li><a href="javascript:void(0)" class="thunderbird"><img src="images/thunderbird.png" /></a></li> 
+                <li><a href="javascript:void(0)" class="vlc"><img src="images/vlc.png" /></a></li>
+               
+                  <!--<button id="button">Button for the fun of it</button>-->
+                  
+            </ul> 
+        </div> 
+        <!-- end quickLaunch --> 
+         <div id="status" style="width: 100px ;height: 25px; background: #eee; position:absolute; top: 5px; right: 200px"></div>
+        <!-- start rightTask --> 
+        <div class="rightTasks"> 
+        	<ul>
+            	<li class="power">
+            		<a href="javascript:void(0)" class="powerDown">&nbsp;</a>
+                </li>
+                <li class="date relative"> 
+            	<span id="date" class="dateZone ui-corner-top"></span>
+                <div class="datepicker"></div> 
+                </li>
+                <li class="volume relative">
+                    <a class=" volIcon ui-corner-all" href="javascript:void(0)">&nbsp;
+                    </a>
+                     <div class="demo volumeBar">
+                        <div class="relative volLevel" style="">
+                        <input type="text" class="volLeveAmt" value="80" /></div>
+                        <div class="slider-vertical"></div>
+						<button class="volClose">Close</button>	
+                    </div>
+                </li>
+                
+          </ul>
+        </div> 
+    </div> 
+    </div> 
+    <!-- end top panel /////////////////////--> 
+
+ 
+<div id="ubuntu"> 
+
+	<div id="containWrap" class="containWrap"> 
+ 	
+ 
+
+ <a href="javascript:void(0)" class=""  id="makeVLC"></a>
+ 
+ 		<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+        
+        
+		<!--<div id="VLC23" class="window ui-corner-tl ui-corner-tr VLC activeWindow">
+			<h3 class="topBar ui-corner-tl ui-corner-tr"> 
+				<span class="topBarIcon VLC"></span> 
+				<span class="title" toggle="VLC23Text">VLC Media Player</span> 
+				
+				<span class="controls" id="VLC23Controls"> 
+					<a href="javascript:void(0)" class="min">&nbsp;</a> 
+					<a href="javascript:void(0)" class="max" >&nbsp;</a> 
+                    <a href="javascript:void(0)" class="restore" >&nbsp;</a> 
+					<a href="javascript:void(0)" class="close">&nbsp;</a> 
+				</span> 
+			</h3>
+			<div class="folderMenu">
+				<ul> 
+                    <li class=" mainLevel office"><u>F</u>ile
+                        	<ul style="display:none" class="children">
+                            	<li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuNew"></span>New Window<span class="shortcut">Ctrl+L</span></a></li>
+                                <li class="dividerLine"></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuCreate"></span>Create Folder <span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Properties<span class="shortcut"></span></a></li>
+                                <li class="dividerLine"></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuCloseAll"></span>Close All Windows<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuClose"></span>Close Window<span class="shortcut"></span></a></li>
+                            </ul>
+                    </li> 
+                </ul> 
+			</div>
+			<div class="content" id="VLC23Content">
+
+
+<div id="jp_container_1" class="jp-audio">
+			<div class="jp-type-playlist">
+            <div class="VLCbackground">
+            	<div class="VLCarea">
+                    Freee
+                   </div>
+                <div class="jp-playlist playlist" id="VLC123Playlist">
+                	<h4>Miaow Playlist</h4>
+                    <div class="playlistScroller">
+					<ul>
+
+						<li></li>
+					</ul>
+                    </div>
+				</div>
+                <div class="clear"></div>
+                </div>
+				<div class="jp-gui jp-interface">
+                	
+                	
+                    <div class="control">
+					<ul class="jp-controls">
+						<li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
+
+						<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+						<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+						<li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
+						<li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+						<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+						<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+
+						<li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+					</ul>
+					<div class="jp-progress">
+						<div class="jp-seek-bar">
+							<div class="jp-play-bar"></div>
+						</div>
+					</div>
+					<div class="jp-volume-bar">
+
+						<div class="jp-volume-bar-value"></div>
+					</div>
+					<div class="jp-time-holder">
+						<div class="jp-current-time"></div>
+						<div class="jp-duration"></div>
+					</div>
+					<ul class="jp-toggles">
+						<li><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a></li>
+
+						<li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a></li>
+						<li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+						<li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+					</ul>
+                    </div>
+                    
+				</div>
+				
+				<div class="jp-no-solution">
+					<span>Update Required</span>
+					To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+				</div>
+			</div>
+
+
+                <!-- jWPlayer///////////////////////////////////// -->
+                <!--
+                </div>
+			</div>
+		
+		</div>-->
+ 		
+		<div id="draggable3" class="window ui-corner-tl ui-corner-tr pictures activeWindow"> 
+			<h3 class="topBar ui-corner-tl ui-corner-tr"> 
+				<span class="topBarIcon Pictures"></span> 
+				<span class="title" toggle="txt1234">My Pictures</span> 
+				
+				<span class="controls" id="draggable3Controls"> 
+					<a href="javascript:void(0)" class="min">&nbsp;</a> 
+					<a href="javascript:void(0)" class="max" >&nbsp;</a> 
+                    <a href="javascript:void(0)" class="restore" >&nbsp;</a> 
+					<a href="javascript:void(0)" class="close">&nbsp;</a> 
+				</span> 
+			</h3> 
+			<!-- content --> 
+            <div class="content" id="draggable3Content"> 
+            	<div class="folderMenu"> 
+                	<ul> 
+                    	<li class=" mainLevel office"><u>F</u>ile
+                        	<ul class="children" style="display:none">
+                            	<li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuNew"></span>New Window<span class="shortcut">Ctrl+L</span></a></li>
+                                <li class="dividerLine"></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuCreate"></span>Create Folder <span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Properties<span class="shortcut"></span></a></li>
+                                <li class="dividerLine"></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuCloseAll"></span>Close All Windows<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuClose"></span>Close Window<span class="shortcut"></span></a></li>
+                            </ul>
+                      </li> 
+                   	  <li class="mainLevel office"><u>E</u>dit
+                      		<ul class="children"  style="display:none">
+                            	<li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuNew"></span>Cut<span class="shortcut">Ctrl+x</span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuCreate"></span>Copy <span class="shortcut">Ctrl+C</span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Paste<span class="shortcut">Ctrl+v</span></a></li>
+                                <li class="dividerLine"></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuCloseAll"></span>Select All<span class="shortcut">Ctrl+a</span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuClose"></span>Move to Trash<span class="shortcut">del</span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuClose"></span>Properties<span class="shortcut"></span></a></li>
+                            </ul>
+                      </li> 
+                      <li class="mainLevel office"><u>V</u>iew
+                      		<ul class="children"  style="display:none">
+                            	<li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuNew"></span>Stop<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuCreate"></span>Reload<span class="shortcut">Ctrl+r</span></a></li>
+                                <li class="dividerLine"></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Main Toolbar<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuCloseAll"></span>Side Pane<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuClose"></span>Status Bar<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuClose"></span>Location Bar<span class="shortcut"></span></a></li>
+                                <li class="dividerLine"></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Zoom In<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Zoom Out<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Normal Size<span class="shortcut"></span></a></li>
+                                <li class="dividerLine"></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Icons<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>List<span class="shortcut"></span></a></li>
+                            </ul>
+                      </li> 
+                       <li class="mainLevel foo office"><u>I</u>nsert
+                       		<ul class="children"  style="display:none">
+                            	<li><a href="javascript:void(0)">Stuff</a></li>
+                                <li><a href="javascript:void(0)">Stuff</a></li>
+                            </ul>
+                       </li>
+                        <li class="mainLevel foo office">F<u>o</u>rmat
+                       		<ul class="children"  style="display:none">
+                            	<li><a href="javascript:void(0)">Stuff</a></li>
+                                <li><a href="javascript:void(0)">Stuff</a></li>
+                            </ul>
+                       </li>
+                        <li class="mainLevel foo office">T<u>a</u>ble
+                       		<ul class="children"  style="display:none">
+                            	<li><a href="javascript:void(0)">Stuff</a></li>
+                                <li><a href="javascript:void(0)">Stuff</a></li>
+                            </ul>
+                       </li>
+                        <li class="mainLevel foo office"><u>T</u>ools
+                       		<ul class="children"  style="display:none">
+                            	<li><a href="javascript:void(0)">Stuff</a></li>
+                                <li><a href="javascript:void(0)">Stuff</a></li>
+                            </ul>
+                       </li>
+                        <li class="mainLevel foo office"><u>W</u>indow
+                       		<ul class="children"  style="display:none">
+                            	<li><a href="javascript:void(0)">Stuff</a></li>
+                                <li><a href="javascript:void(0)">Stuff</a></li>
+                            </ul>
+                       </li>
+                      <li class="mainLevel"><u>G</u>o
+                      		<ul class="children"  style="display:none">
+                            	<li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuNew"></span>Open Parent<span class="shortcut">Alt+Up</span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuCreate"></span>Back<span class="shortcut">Alt+Left</span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Forward<span class="shortcut">Alt+Right</span></a></li>
+                                 <li class="dividerLine"></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuCloseAll"></span>Home Folder<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuClose"></span>Computer<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuClose"></span>Trash<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Network<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Location<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Search for Files...<span class="shortcut"></span></a></li>
+                                <li class="dividerLine"></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Clear History<span class="shortcut"></span></a></li>
+                            </ul>
+                      </li> 
+                      <li class="mainLevel"><u>B</u>ookmarks
+                      		<ul class="children"  style="display:none">
+                            	<li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuNew"></span>Add Bookmark<span class="shortcut">Ctrl+d</span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuCreate"></span>Edit Bookmarks<span class="shortcut">Ctrl+b</span></a></li>
+                                <li class="dividerLine"></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Documents<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Pictures<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Videos<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Projects<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuProp"></span>Downloads<span class="shortcut"></span></a></li>
+                                 
+                            </ul>
+                      </li> 
+                      <li class="mainLevel office"><u>H</u>elp
+                      		<ul class="children"  style="display:none">
+                            	<li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuNew"></span>Contents<span class="shortcut">F1</span></a></li>
+                                <li class="dividerLine"></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuCreate"></span>Get Help Online<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuCreate"></span>Report a Problem<span class="shortcut"></span></a></li>
+                                 <li class="dividerLine"></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuCreate"></span>About<span class="shortcut"></span></a></li>
+                                <li><a href="javascript:void(0)"><span class="folderMenuIcon folderMenuCreate"></span>What is this?<span class="shortcut"></span></a></li>
+                                
+                           </ul>
+                      </li> 
+                  </ul> 
+                    
+                    
+                </div> 
+                <div class="folderIcons clearFloat"> 
+                <ul> 
+           				<li class="back disabled"><div><a href="javascript:void(0)" class="ui-corner-all folderbuttonBack"><span>&nbsp;</span>Back</a></div></li>
+                        <li class="forward"><div><a href="javascript:void(0)" class="ui-corner-all"><span>&nbsp;</span>Forward</a></div></li>  
+                        <li class="parent"><div><a href="javascript:void(0)" class="ui-corner-all"><span>&nbsp;</span>Up</a></div></li>
+                        <li class="stop"><div><a href="javascript:void(0)" class="ui-corner-all"><span>&nbsp;</span>Stop</a></div></li>
+						<li class="reload"><div><a href="javascript:void(0)" class="ui-corner-all"><span>&nbsp;</span>Refresh</a></div></li>
+                         
+						
+				
+						<li class="separator">&nbsp;</li> 
+                        
+                        <li class="home"><div><a href="javascript:void(0)" class="ui-corner-all folderbuttonHome"><span>&nbsp;</span>Home</a></div></li>
+                        <li class="computer"><div><a href="javascript:void(0)" class="ui-corner-all folderbuttonComputer"><span>&nbsp;</span>Computer</a></div></li>
+                        
+                        <li class="separator">&nbsp;</li>  
+                        
+                        <li class="search"><div><a href="javascript:void(0)" class="ui-corner-all folderbuttonSearch"><span>&nbsp;</span>Search</a></div></li>
+                        <li class="help"><div><a href="javascript:void(0)" rel="folder" class="ui-corner-all helper folderbuttonHelp"><span>&nbsp;</span>Help</a></div></li>
+						
+						
+				</ul>	
+            
+            	</div> 
+                <div class="folderTrail clearFloat"> 
+               		<ul> 
+                    	<li><a href="javascript:void(0)" rel="home" class="root">Home</a></li> 
+                        <li><a href="javascript:void(0)" rel="home-corbincredible" class="user">Corbincredible</a></li> 
+                        <li><a href="javascript:void(0)" rel="home-corbincredible-pictures" class="folderTrailLoc1 ">Pictures</a></li> 
+                        <li><a href="javascript:void(0)" rel="home-corbincredible-pictures-b+w" class="folderTrailLoc2 selected">B+W</a></li> 
+                    </ul> 
+                </div> 
+                <div class="folderArea clearFloat" id="draggable3Container">
+					<!--<div class="loading">loading</div>-->
+					<div class="folderSideBar">
+                    	<div class="places">
+                        	<div class="placeTitle">
+                            	<span class="placeText ui-corner-all">
+                                Places
+                                	<span class="exPlace ui-corner-tr ui-corner-br">
+                                    	<a>&nbsp;</a></span>
+                                </span> 
+                                
+                            </div>
+                            
+                            
+                            <div class="placeMode foo ">
+                            <ul>
+                            	<li><a href="javascript:void(0)" class="folder">corbin</a></li>
+                                <li><a href="javascript:void(0)" class="folder">desktop</a></li>
+                            	<li><a href="javascript:void(0)" class="folder">filesystem</a></li>
+                                <li><div class="divider"></div></li>
+                                <li><a href="" class="folder">documents</a></li>
+                            </ul>
+                            </div>
+
+                            
+                            <div class="treeMode">
+                           		<ul class="jqueryFileTree">
+                                  <li class="directory expanded"><a href="javascript:void(0)" rel="home-corbincredible-pictures" class="selected heirarch"><span></span>Pictures</a>
+                                    <ul class="jqueryFileTree subLevelFile">
+                                        <li class="subdirectory "><a href="javascript:void(0)" rel="home-corbincredible-pictures-b+w" class="selected"><span></span>B+W</a></li>
+                                        <li class="subdirectory "><a href="javascript:void(0)" rel="home-corbincredible-pictures-nature"><span></span>Nature</a></li>
+                                        <li class="subdirectory "><a href="javascript:void(0)" rel="home-corbincredible-pictures-man"><span></span>Manmade</a></li>
+                                        <li class="subdirectory "><a href="javascript:void(0)" rel="home-corbincredible-pictures-mobile"><span></span>Mobile</a></li>
+                                    </ul>
+                                </li>
+                                <li class="directory"><a href="javascript:void(0)" class="heirarch" rel="home-corbincredible-documents"><span></span>Documents</a>
+                                     <ul class="jqueryFileTree subLevelFile">
+                                        <li class="subdirectory "><a href="javascript:void(0)" rel="home-corbincredible-documents-work"><span></span>Work</a></li>
+                                        <li class="subdirectory "><a href="javascript:void(0)" rel="home-corbincredible-documents-church"><span></span>Church</a></li>
+                                        <li class="subdirectory "><a href="javascript:void(0)" rel="home-corbincredible-documents-funny"><span></span>Funny</a>
+                                            <!-- <ul class="jqueryFileTree subsubLevelFile">
+                                                <li class="subsubdirectory "><a href="javascript:void(0)" rel="home-corbincredible-documents-funny-madlib"><span></span>Madlib</a></li>
+                                                <li class="subsubdirectory "><a href="javascript:void(0)" rel="home-corbincredible-documents-funny-stories"><span></span>Stories</a></li>
+                                            </ul>-->
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="directory "><a href="javascript:void(0)" class="heirarch" rel="home-corbincredible-music"><span></span>Music</a></li>
+                                <li class="directory "><a href="javascript:void(0)" class="heirarch" rel="home-corbincredible-videos"><span></span>Video</a></li>
+                                <li class="directory "><a href="javascript:void(0)" class="heirarch" rel="home-corbincredible-projects"><span></span>Projects</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+					</div>
+					<div class="folderContent">
+					
+                    
+                   
+					
+                  
+					
+					</div>
+				
+
+				
+                	
+                </div> 
+                <div class="folderStatusBar"><span class="folderLocation">My Pictures</span> -- <span class="folderItemsNum">17</span> files</div>
+         
+            </div> 
+		</div> 
+	
+	
+	
+
+  <div class="powerButton">
+  Your computer will shut down in <span class="shutdownTime">60</span> seconds.
+  </div>
+<div id="dialog">This is a dialog</div>
+<div id="soon">Coming soon!</div>
+<div id="helper">
+	<div class="helpTopic"></div>
+</div>
+
+			<div id="javascript_countdown" style="position:absolute; width: 206px; border: 1px solid #000; position:absolute; top: 60px; right: 50px; height:86px; background:#777;">
+           
+            <span style="display:block; cursor:move; height: 17px; font-size:11px; text-align:center; line-height:17px; color: #fff; border: 3px solid #333; border-bottom-width: 0px;">The Final Countdown</span>
+            <div style="position:relative" class="rap">
+             <a href="javascript:void(0)" style="display:block; position:absolute; width: 206px; height: 30px; top: 20px; left: 0px; text-align:center;  color: #fff;">Activate the Omega 13</a>
+			 <div id="javascript_countdown_time" 
+             style="width: 200px; height:60px; background:#fff; font-size: 30px; background-image:url(../images/about7.jpg); border: 3px solid #222;
+             line-height:60px; margin-top: 0px; text-align:center; color: #fff; text-shadow:0.1em 0.1em 0.05em #333;">
+             </div>
+             </div>
+             </div>
+
+	</div><!-- end containWrap --> 
+</div><!-- end ubuntu --> 
+ 
+<!-- footer ///////////////////////////// --> 
+<div class="footerBarContainer"> 
+	<div class="footerBar"> 
+		<div class="left menu"> 
+            <button class="mainMenuButton">Menu</button>
+            <div class="mainMenu foo">
+            	What, do you think this is windows?
+            </div>
+		</div> 
+		
+		<div class="left panelMisc"> 
+		<span id="colons1" class="colons"><p>::</p><p>::</p><p>::</p></span> 
+		</div> 
+		
+		<div class="left desk"> 
+			<span class="windows"> 
+				<a href="javascript:void(0)" id="desktop" class="desktop"><img src="images/panelDesktop.png" /></a> 
+			</span> 
+		</div> 
+		
+        <div class="panelTrayContainer">
+		
+        	<div class="arrowLeft">&laquo;</div>
+            <div class="left panelTray"> 
+            	
+                    <!-- pictures --> 
+                    <button id="draggable3Tray" class="folder tray active"> 
+                        My Pictures
+                    </button> 
+                    
+                </span> 
+            </div> 
+            <div class="arrowRight">&raquo;</div>
+        </div>
+        
+		<div class="right desktops"> 
+			<a href="javascript:void(0)" class="sendLeft currentScreen">1</a> 
+            <a href="javascript:void(0)" class="sendRight">2</a> 
+		</div> 
+		<div class="clearFloat"></div> 
+		
+	</div> 
+</div> 
+<!-- end footer --> 
+ 
+ 
+</li> 
+<li class="squares relative" id="extra"> 
+ 
+<div class="panelContainer"> 
+    <div class="panel"> 
+        <div class="nav">&nbsp;</div><!-- end nav Div --> 
+    
+        <!-- start quickLaunch --> 
+        <div class="quickLaunch"> 
+            <ul> 
+                <li><a href="javascript:void(0)" class="firefox"><img src="images/firefox.png" /></a></li> 
+                <li><a href="javascript:void(0)" class="thunderbird"><img src="images/thunderbird.png" /></a></li> 
+                <li><a href="javascript:void(0)" class="vlc"><img src="images/vlc.png" /></a></li> 
+            </ul> 
+        </div> 
+        <!-- end quickLaunch --> 
+        
+        <!-- start rightTask --> 
+        <div class="rightTasks"> 
+        	<ul>
+            	<li class="power">
+            		<a href="javascript:void(0)" class="powerDown">&nbsp;</a>
+                </li>
+                <li class="date relative"> 
+            	<span class="dateZone ui-corner-top"></span> 
+                 <div class="datepicker"></div> 
+                </li>
+                <li class="volume relative">
+                    <a class=" volIcon ui-corner-all" href="javascript:void(0)">&nbsp;
+                    </a>
+                     <div class="demo volumeBar">
+                        <div class="relative volLevel" style="">
+                        <input type="text" class="volLeveAmt" /></div>
+                        <div class="slider-vertical"></div>
+						<button class="volClose">Close</button>	
+                    </div>
+                </li>
+          </ul>
+        </div> 
+    </div> 
+    </div> 
+    <!-- end top panel /////////////////////--> 
+    
+    <div id="extraBuntu"> 
+    	<div class="containWrap"> 
+        <div style="background-image:url(images/opacity.png); width: 600px; height: 300px; border: 2px solid #000; position:absolute; top: 50px; left: 50px;">
+        	<div style="margin: 10px; background:#fff; height:270px; padding: 5px;">
+			<button id="extra" class="left">Extra bonus zone!</button> 
+            
+          
+            <img src="images/zombiesAnim1.gif" class="left" /> 
+
+			</div>
+		</div>
+		</div> 
+        
+	</div> 
+    
+    
+    <!-- footer ///////////////////////////// --> 
+<div class="footerBarContainer"> 
+	<div class="footerBar"> 
+		<div class="left menu"> 
+          <button class="mainMenuButton">Menu</button>
+            <div class="mainMenu foo">
+            	What, do you think this is windows?
+            </div>
+		</div> 
+		
+		<div class="left panelMisc"> 
+		<span id="colons1" class="colons"><p>::</p><p>::</p><p>::</p></span> 
+		</div> 
+		
+		<div class="left desk"> 
+			<span class="windows"> 
+				<a href="javascript:void(0)" id="desktop" class="desktop" onClick="hideAll();" ><img src="images/panelDesktop.png" /></a> 
+			</span> 
+		</div> 
+		<div class="panelTrayContainer">
+		<div class="left panelTray"> 
+        &nbsp;
+		</div>
+        </div> 
+		<div class="right desktops"> 
+			<a href="javascript:void(0)" class="sendLeft">1</a> 
+            <a href="javascript:void(0)" class="sendRight currentScreen">2</a> 
+		</div> 
+		<div class="clearFloat"></div> 
+		
+	</div> 
+</div> 
+<!-- end footer --> 
+ 
+ 
+</li> 
+</ul> 
+ 
+<!-- scripts //////////////////////////// --> 
+ 
+</div> 
+<!-- jquery!!!!! ---> 
+ 
+ 
+</body> 
+</html> 
+ 
+ 

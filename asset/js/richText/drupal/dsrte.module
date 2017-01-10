@@ -1,0 +1,76 @@
+<?php
+/**
+ * Damn Small Rich Text Editor v0.2.3 for jQuery
+ * by Roi Avidan <roi@avidansoft.com>
+ * Demo: http://www.avidansoft.com/dsrte/
+ * Released under the GPL License
+ *
+ * Includes a minified version of AjaxFileUpload plugin for jQuery, taken from: http://www.phpletter.com/DOWNLOAD/
+ * DOES NOT INCLUDE jQuery! You should download jQuery from http://jquery.com
+ *
+ * This is a Drupal 6 module which creates a new type of form element - "dsrte".
+ * You need to use this element instead of a "textarea" element when you wish to display the DSRTE editor.
+ */
+
+require_once 'lib/dsrte.php';
+foreach ( glob( drupal_get_path('module', 'dsrte').'/lib/plugins/*.php' ) as $plugin )
+    require_once( $plugin );
+
+/**
+ * Implementation of hook_help().
+ */
+function dsrte_elements() {
+  return array(
+    'dsrte' => array(
+      '#input' => TRUE,
+      '#resizable' => TRUE,
+//      '#element_validate' => array( 'dsrte_submit_handler' ),
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_theme().
+ */
+function dsrte_theme() {
+  return array(
+    'dsrte' => array(
+      'arguments' => array(
+        'form' => NULL,
+      ),
+    ),
+  );
+}
+
+/**
+ * Create a dsRTE element.
+ */
+function theme_dsrte($element) {
+  // create a new dsRTE instance
+  $dsrte = new dsRTE($element['#name'], $element['#commands'] ? $element['#commands'] : false, $element['#resizable']);
+
+  // add css file
+  drupal_add_css(drupal_get_path('module','dsrte').'/lib/dsrte.css');
+
+  // extract script files from script tags and add them using Drupal's drupal_add_js
+  if (preg_match_all('/src="(.*?)"/i', $dsrte->getScripts(), $matches)) {
+    foreach ($matches[1] as $script) {
+      if (stripos($script, 'jquery.js') === false) {
+        drupal_add_js(drupal_get_path('module','dsrte')."/$script");
+      }
+    }
+  }
+
+  // change element into type item
+  $element['#type'] = 'item';
+  $element['#value'] = $dsrte->getHTML($element['#value'] ? $element['#value'] : $element['#default_value']);
+
+  // render new dsRTE editor element
+  return drupal_render($element);
+}
+
+/**
+ *
+ */
+function dsrte_submit_handler($element) {
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>Example: Test plugins - jWYSIWYG</title>
+<link rel="stylesheet" type="text/css" href="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/help/lib/blueprint/scren.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/help/lib/blueprint/print.css" media="print" />
+<!--[if lt IE 8]><link rel="stylesheet" href="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/help/lib/blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/help/lib/jquery.js"></script>
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/help/lib/plugins/autoload/jquery.autoload.js"></script>
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/help/lib/plugins/farbtastic/farbtastic.js"></script>
+<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script> -->
+<!-- <link rel="stylesheet" href="../lib/jquery.simplemodal.css" type="text/css"/>
+<script type="text/javascript" src="../lib/jquery.simplemodal.js"></script> -->
+<link rel="stylesheet" href="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/help/lib/plugins/farbtastic/css/farbtastic.css" type="text/css"/>
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/jquery.wysiwyg.js"></script>
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/plugins/wysiwyg.autoload.js"></script>
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/plugins/wysiwyg.fullscreen.js"></script>
+
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/plugins/wysiwyg.rmFormat.js"></script>
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/controls/wysiwyg.colorpicker.js"></script>
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/controls/wysiwyg.image.js"></script>
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/controls/wysiwyg.link.js"></script>
+<script type="text/javascript" src="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/controls/wysiwyg.table.js"></script>
+<script type="text/javascript">
+function jWizzyLoader(which) {
+which.wysiwyg({
+				plugins: {
+					autoload: true,
+					rmFormat: { rmMsWordMarkup: true }
+				},
+
+				controls: {
+					html: {visible: true},
+					bold          : { visible : true },
+			italic        : { visible : true },
+			underline     : { visible : true },
+			strikeThrough : { visible : true },
+			
+			justifyLeft   : { visible : true },
+			justifyCenter : { visible : true },
+			justifyRight  : { visible : true },
+			justifyFull   : { visible : true },
+
+			indent  : { visible : true },
+			outdent : { visible : true },
+
+			subscript   : { visible : true },
+			superscript : { visible : true },
+			
+			undo : { visible : true },
+			redo : { visible : true },
+			
+			insertOrderedList    : { visible : true },
+			insertUnorderedList  : { visible : true },
+			insertHorizontalRule : { visible : true },
+			
+			cut   : { visible : true },
+			copy  : { visible : true },
+			paste : { visible : true },
+			html  : { visible: true },
+			increaseFontSize : { visible : true },
+			decreaseFontSize : { visible : true },
+			
+			exam_html: {
+				exec: function() {
+					this.insertHtml('<abbr title="exam">Jam</abbr>');
+					return true;
+				},
+				visible: true
+			},
+			
+					colorpicker: {
+						groupIndex: 11,
+						visible: true,
+						css: {
+							"color": function (cssValue, Wysiwyg) {
+								var document = Wysiwyg.innerDocument(),
+									defaultTextareaColor = $(document.body).css("color");
+
+								if (cssValue !== defaultTextareaColor) {
+									return true;
+								}
+
+								return false;
+							}
+						},
+						exec: function() {
+							if ($.wysiwyg.controls.colorpicker) {
+								$.wysiwyg.controls.colorpicker.init(this);
+							}
+						},
+						tooltip: "Colorpicker"
+					},
+					fullscreen: {
+						groupIndex: 12,
+						visible: true,
+						exec: function () {
+							if ($.wysiwyg.fullscreen) {
+								$.wysiwyg.fullscreen.init(this);
+							}
+						},
+						tooltip: "Fullscreen"
+					}
+				},
+
+				
+			});
+}
+
+$(document).ready(function () {
+	$("#t").click(function(){$('#ajaxtest').load("blog/church-inception2.html", function () { jWizzyLoader($('#jw'))});});
+	$("#h").click(function(){$(".container").find(".documentContent").load("blog/church-inception.html", function () { jWizzyLoader($(".documentContent textarea"))});});
+});
+
+
+</script>
+</head>
+<body><div class="container">
+	<h1>jWYSIWYG</h1>
+	<h2>Example: Test Plugins &ndash; Image, Table, Colorpicker, i18n, autoload</h2>
+
+	<a href="#" id="t">Load now</a><br />
+    <a href="#" id="h">Load other</a>
+	<div id="ajaxtest"></div>
+
+
+<div class="documentContainer ui-resizable" style="height: 305px;"><div class="contentTitle">WikiLeaks and Nosy Beaks</div>
+<div class="documentContent" id="testLoad">error loading database content through jQuery - you're probably not online</div><div class="ui-resizable-handle ui-resizable-e"></div><div class="ui-resizable-handle ui-resizable-s"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1001;"></div></div>
+	<!--<form action="" method="get">
+	<textarea name="text" class="area"></textarea>
+	<hr/>
+
+	</form>
+
+	<hr/>
+	<a href="asset/js/jwizzy/akzhan-jwysiwyg-41c6a98/help/examples/index.html">Index</a>-->
+</div></body>
+</html>

@@ -1,0 +1,458 @@
+
+
+/* ///// normal folder //// */
+#firefoxfolder {
+	position: absolute;
+	top: 70px;
+	left: 380px;
+	min-width: 600px;
+	height: 500px;
+	width: 950px;
+	z-index: 103;
+	display: none;
+	
+}
+#firefoxfolder div#firefoxhandle {display: block; height: 26px; position: relative; width: 883px;}
+#firefoxfolder span {
+	display: block;
+	float: left;
+	height: 26px;
+	}
+#firefoxfolder span#firefoxedgeL {
+	background-image:url(../images/folderEdgeL.png);
+	background-repeat: no-repeat;
+	width: 8px;
+	display: block; 
+	float: left;
+}
+
+#firefoxfolder span#firefoxiconZone {
+	background-image:url(../images/folderTop.png);
+	background-repeat: repeat-x;
+	width: 82px;
+	float: left;
+}
+#firefoxfolder span#firefoxiconZone img.icon {
+	padding-top: 5px;
+}
+#firefoxfolder span#firefoxtitleZone {
+	background-image:url(../images/folderTop.png);
+	background-repeat: repeat-x;
+	text-align: center;
+	color: #eee;
+	font-weight: bold;
+	line-height: 26px;
+	float: left;
+}
+
+#firefoxfolder span#firefoxtitleZone  span{
+	float: none;
+	position: absolute;
+	top: 0px;
+	height: 26px;
+}
+
+#firefoxfolder span#firefoxtitleZone  span.over{
+	left: 46.9%;
+	line-height: 26px;
+	}
+#firefoxfolder span#firefoxtitleZone  span.under{
+	left: 47%;
+	line-height: 28px;
+	color: #222;
+	}
+
+	
+	
+#firefoxfolder span#firefoxtitleZone.normal {
+	width: 700px;
+	}
+
+	
+/* controls */
+#firefoxfolder span#firefoxcontrolZone {
+	width: 82px;
+	background-image:url(../images/folderTop.png);
+}
+#firefoxfolder span#firefoxcontrolZone.normal {
+	float: left;
+	}
+	
+#firefoxfolder span#firefoxcontrolZone a {
+	display: block;
+	height: 26px;
+	padding-top: 0px;
+	float: left;
+	text-decoration: none;
+}
+#firefoxfolder span#firefoxcontrolZone a.min {
+	width: 27px;
+	background-image:url(../images/folderControlsMin.png);
+	}
+#firefoxfolder span#firefoxcontrolZone a.min:hover {
+	width: 27px;
+	background-image:url(../images/folderControlsMinOver.png);
+	}
+
+#firefoxfolder span#firefoxcontrolZone a.max{
+	width: 28px;
+	background-image:url(../images/folderControlsMax.png);
+}
+
+#firefoxfolder span#firefoxcontrolZone a.max:hover{
+	width: 28px;
+	background-image:url(../images/folderControlsMaxOver.png);
+}
+	
+#firefoxfolder span#firefoxcontrolZone a.close{
+	width: 27px;
+	background-image:url(../images/folderControlsClose.png);
+}
+#firefoxfolder span#firefoxcontrolZone a.close:hover{
+	width: 27px;
+	background-image:url(../images/folderControlsCloseOver.png);
+}
+
+/* edge */
+#firefoxfolder span#firefoxedgeR {
+	background-image:url(../images/folderEdgeR.png);
+	background-repeat: no-repeat;
+	width: 8px;
+}
+#firefoxfolder span#firefoxedgeR.normal {
+	float: left
+	}
+
+
+
+/* //////////// file commands ////////////////////////*/
+
+#firefoxfolder div#firefoxfolderInside {width: 889px}
+#firefoxfolder div#firefoxfolderInside div#firefoxleftEdge {
+	height: 510px;
+	width: 5px;
+	background-image:url(../images/folderSideL.png);
+	float: left;
+}
+
+#firefoxfolder div#firefoxfolderInside div#firefoxreality  {
+	height: 510px;
+	width: 870px;
+	float: left;
+	background-color: #eee;
+}
+
+#firefoxfolder div#firefoxfolderInside div#firefoxrightEdge {
+	height: 510px;
+	width: 5px;
+	background-image:url(../images/folderSideR.png);
+}
+#firefoxfolder div#firefoxfolderInside div#firefoxrightEdge.normal {
+	float: left;
+	}
+
+
+
+#firefoxfolder div#firefoxfileCommands {
+	display: block;
+}
+
+/*// folder file top ///*/
+#firefoxfolder div#firefoxfileCommands div#firefoxfileTop {
+	height: 28px;
+	background-color: #eee;
+}
+
+
+#firefoxfolder div#firefoxfileCommands div#firefoxfileTop div#firefoxtruth{
+	height: 28px;
+	width: 590px;
+	background-image:url(../images/folderFileTop.png);
+	float: left;
+	text-indent: 5px;
+	line-height: 28px;
+}
+#firefoxfolder div#firefoxfileCommands div#firefoxfileTop div#firefoxtruth.normal{
+	width: 870px;
+	}
+
+
+
+
+/*// folder file mid ///*/
+#firefoxfolder div#firefoxfileCommands div#firefoxfileMid{
+	height: 40px;
+	background-color: #eee;
+}
+
+#firefoxfolder div#firefoxfileCommands div#firefoxfileMid div#firefoxtruthMid{
+	height: 40px;
+	width: 590px;
+	background-image:url(../images/fileMidFirefoxRepeat.png);
+	float: left;
+	text-indent: 5px;
+	line-height: 40px;
+}
+#firefoxfolder div#firefoxfileCommands div#firefoxfileMid div#firefoxtruthMid.normal{
+	width: 870px;
+	}
+#firefoxfolder div#firefoxfileCommands div#firefoxfileMid div#firefoxtruthMid a img {border-style: none}
+#firefoxfolder div#firefoxfileCommands div#firefoxfileMid div#firefoxtruthMid a {margin-top: 0px; font-size: 0.00001pt; display: block; float: left;}
+
+#firefoxfolder div#firefoxfileCommands div#firefoxfileMid div#firefoxtruthMid div#firefoxButtons {
+	float: left;
+	display: block;
+	height: 40px;
+	width: 200px;
+	
+	}
+
+ #firefoxfolder div#firefoxfileCommands div#firefoxfileMid div#firefoxtruthMid div#firefoxURL {
+	margin-left: 15px;
+	display: block;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	width: 500px;
+ }
+
+ #firefoxfolder div#firefoxfileCommands div#firefoxfileMid div#firefoxtruthMid div#firefoxURL a#go img {
+	border-style: none;
+ }
+ 
+ 
+ 
+ 
+/*// folder file bot ///*/
+#firefoxfolder div#firefoxfileCommands div#firefoxfileBot{
+	height: 30px;
+	background-color: #eee;
+}
+
+#firefoxfolder div#firefoxfileCommands div#firefoxfileBot div#firefoxtruthBot{
+	height: 30px;
+	width: 590px;
+	background-image:url(../images/folderFileBot.png);
+	float: left;
+	text-indent: 5px;
+	line-height: 30px;
+}
+#firefoxfolder div#firefoxfileCommands div#firefoxfileBot div#firefoxtruthBot.normal{
+	width: 870px;
+	}
+#firefoxfolder span#firefoxtitleZone {cursor:default} /* or move */
+
+#firefoxfolder div#firefoxfileCommands div#firefoxfileBot div#firefoxtruthBot a {
+	float: left;
+	display: block;
+	height: 28px;
+	line-height: 28px;
+	margin-right: 3px;
+	text-decoration: none;
+	color: #000;
+	font-size: 0.8em;
+	border: 1px solid #eee;
+	padding-left: 3px;
+	padding-right: 3px;
+	}
+#firefoxfolder div#firefoxfileCommands div#firefoxfileBot div#firefoxtruthBot a img {
+float: left;
+border-style: none
+}
+#firefoxfolder div#firefoxfileCommands div#firefoxfileBot div#firefoxtruthBot a:hover {
+border: 1px solid #999;
+}
+
+
+
+
+/* /// maxinimzed / minimized folder /// */
+#firefoxfolder div#firefoxhandle span#firefoxedgeL {}
+
+#firefoxfolder span#firefoxtitleZone.max {
+	width: 100%;
+	}
+#firefoxfolder div#firefoxfileCommands div#firefoxfileTop div#firefoxtruth.max{
+	width: 100%;
+	}
+#firefoxfolder div#firefoxfileCommands div#firefoxfilefirefoxid div#firefoxtruthfirefoxid.max{
+	width: 100%;
+	}
+#firefoxfolder div#firefoxfileCommands div#firefoxfilefirefoxid div#firefoxtruthBot.max{
+	width: 100%;
+	}
+
+#firefoxfolder div#firefoxcontents div#firefoxsideBar.max {
+	height: 900px; /* get height of browser - 26px */
+}
+#firefoxfolder span#firefoxedgeR.max {
+	float: right;
+	background-image:url(../images/folderTop.png);
+	display: none;
+}
+#firefoxfolder span#firefoxcontrolZone.max {
+	float: right;
+	padding-right: 2px;
+}
+
+#firefoxfolder div#firefoxfolderInside div#firefoxrightEdge.max {
+	float: right;
+	}
+
+#firefoxfolder div#firefoxcontents div#firefoxmainContent div#firefoxframe.max{
+	width: 898px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* //// content stuff /// */
+#firefoxfolder div#firefoxcontents {
+	border-top: 1px solid #999;
+	border-bottom: 0px solid #999;
+	height: 409px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	background-color: #fff;
+}
+#firefoxfolder div#firefoxcontents div#firefoxsideBar {
+	display: block;
+	float: left;
+	width: 151px;
+	border-right:0px solid #eee;
+	background-color: #fff;
+}
+#firefoxfolder div#firefoxcontents div#firefoxsideBar.normal {
+	height: 375px;
+}
+
+#firefoxfolder div#firefoxcontents div#firefoxsideBar div.leftEdge {
+	height: 201px;
+	width: 5px;
+	background-image:url(../images/folderSideL.png);
+	float: left;
+}
+#firefoxfolder div#firefoxcontents div#firefoxsideBar div#tree {
+	float: left;
+	width:148px;
+	height: 201px;
+	background-color: #fff;
+	border-bottom: 0px solid #fff;
+	padding-bottom: 2px;
+}
+
+#firefoxfolder div#firefoxcontents div#firefoxmainContent {
+	background-color: #fff;
+}
+
+#firefoxfolder div#firefoxcontents div#firefoxmainContent div#firefoxframe {
+	float: left;
+	height: 375px;
+	background-color: #fff;
+	border-left: 2px solid #eee;
+}
+#firefoxfolder div#firefoxcontents div#firefoxmainContent div#firefoxframe.normal {
+	width: 713px;
+}
+
+
+
+.pad {padding-left: 5px; padding-right: 5px;}
+.border {border-top: 1px solid #999; border-bottom: 1px solid #999;}
+
+#firefoxfolder div#firefoxfooter {
+	height: 35px;
+	border-bottom: 1px solid #000;
+	clear: both;
+}
+#firefoxfolder div#firefoxfooter div.left {
+	width: 5px;
+	background-image:url(../images/folderSideL.png);
+	float: left;
+	height: 35px;
+	display: block;
+}
+#firefoxfolder div#firefoxfooter div#firefoxfoot{
+	width: 870px;
+	background-color: #eee;
+	float: left;
+	height: 34px;
+	display: block;
+	border-top: 1px solid #999;
+	line-height: 30px;
+	color: #222;
+	font-size: 0.9em;
+}
+
+
+#firefoxfolder div#firefoxfooter div.right {
+	width: 5px;
+	background-image:url(../images/folderSideR.png);
+	float: left;
+	height: 35px;
+	display: block;
+	background-repeat: repeat-y;
+}
+
+
+
+
+#firefoxfolder div#firefoxcontents div#firefoxsideBar div#tree {height: auto}
+#firefoxfolder div#firefoxcontents div#firefoxsideBar div#tree a {
+	display: block;
+	width: 100%;
+	height: 33px;
+	margin-bottom: 1px;
+	text-indent: 0px;
+	line-height: 33px;
+	color: #222;
+	text-decoration:none;
+	}
+
+#firefoxfolder div#firefoxcontents div#firefoxsideBar div#tree a.marg{
+	margin-top: 41px;
+}
+
+#firefoxfolder div#firefoxcontents div#firefoxsideBar div#tree a:hover {
+	background-image:url(../images/panelOver.jpg);
+	}
+#firefoxfolder div#firefoxcontents div#firefoxsideBar div#tree a.mainTree{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	background-color: #ddd;
+	text-decoration: none;
+	font-weight: bold;
+	color: #222;
+	border:1px solid #555;
+	width: 100%;
+	text-indent: 15px;
+}
+
+#firefoxfolder div#firefoxcontents div#firefoxsideBar div#tree a.mainTree span{
+	float: right;
+	margin-right: 10px;
+	
+}
+#firefoxfolder div#firefoxcontents div#firefoxsideBar div#tree a.mainTree:hover {
+	background-image:none;
+	background-color: #ccc;
+}
+
+#firefoxfolder div#firefoxcontents div#firefoxsideBar div#tree a span.placesIcon {
+	display: block;
+	float: left;
+	width: 30px;
+	/*background-color: #333;*/
+	height: 33px;
+	margin-right: 4px;
+}
+#firefoxfolder div#firefoxcontents div#firefoxsideBar div#tree a img {border-style: none}

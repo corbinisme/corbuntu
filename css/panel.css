@@ -1,0 +1,282 @@
+
+.panelContainer {
+	height: 35px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	display:block;
+	background-image:url(../images/opacity.png);
+	z-index: 104;
+}
+.panel {
+	position:absolute;
+	top:0px;
+	left: 0px;
+	height: 33px;
+	display:block;
+	width:100%;
+	z-index:1000;
+}
+.panel.default {
+	background-color: #efebe7;
+	opacity: 1;
+}
+
+
+
+.panel .quickLaunch {
+	float: left;
+	display:block;
+	height: 33px;
+	line-height:33px;
+	font-size:0.85em;
+	font-weight:bold;
+}
+.panel .quickLaunch a img {
+	border-style: none; 
+	height: 28px; 
+	padding-top: 3px;
+}
+
+
+
+
+.panelMisc {display: block; float: left;}
+.panelMisc span.colons {height: 28px; font-size: 0.5em; display: block; float: left; width: 25px; text-indent: 10px;}
+.panelMisc span.colons p { margin-bottom: 0px; margin-top: 0px; }
+.panelMisc span.windows {
+	float: left; display: block;
+	height: 33px;
+	overflow-y:scoll;
+	overflow-x:hidden;
+	/*width: 600px;*/
+	}
+.panelMisc a {display: block; float: left}
+.panelMisc a img {border-style: none;}
+.panelMisc a span.panelImg {display: block; float: left; width: 25px;}
+.panelMisc a span.panelName{display: block; float: left; }
+
+.panelMisc a.desktop {margin-top: 3px}
+.panelMisc a.PanelPfolder {
+margin-left: 10px;
+width: 148px;
+background-repeat: no-repeat;
+height: 23px;
+margin-top: 5px;
+line-height: 23px;
+text-indent: 10px;
+color: #333;
+font-size: 0.8em;
+font-weight: normal;
+text-decoration: none;
+display: none;
+float: left;
+display: none;
+}
+
+
+
+.panelMisc a#PanelPfolder.over {
+background-image:url(../images/folder2.png);
+}
+.panelMisc a#PanelPfolder.initial {
+background-image:url(../images/folder1.png);
+}
+
+
+.panelMisc a#PanelZombies {
+margin-left: 5px;
+width: 148px;
+background-repeat: no-repeat;
+height: 23px;
+margin-top: 5px;
+line-height: 23px;
+text-indent: 10px;
+color: #333;
+font-size: 0.8em;
+font-weight: normal;
+text-decoration: none;
+display: none;
+float: left;
+display: none;
+}
+.panelMisc a#PanelZombies.over {
+background-image:url(../images/folder2.png);
+}
+.panelMisc a#PanelZombies.initial {
+background-image:url(../images/folder1.png);
+}
+
+
+/* ///////////////////////// */
+.panelMisc a#PanelMfolder {
+margin-left: 5px;
+width: 148px;
+background-repeat: no-repeat;
+height: 23px;
+margin-top: 5px;
+line-height: 23px;
+text-indent: 10px;
+color: #333;
+font-size: 0.8em;
+font-weight: normal;
+text-decoration: none;
+display: none;
+float: left;
+display: none;
+}
+.panelMisc a#PanelMfolder.over {
+background-image:url(../images/folder2.png);
+}
+.panelMisc a#PanelMfolder.initial {
+background-image:url(../images/folder1.png);
+}
+
+/* ///////////////////////// */
+.panelMisc a#PanelDfolder {
+margin-left: 5px;
+width: 148px;
+background-repeat: no-repeat;
+height: 23px;
+margin-top: 5px;
+line-height: 23px;
+text-indent: 10px;
+color: #333;
+font-size: 0.8em;
+font-weight: normal;
+text-decoration: none;
+display: none;
+float: left;
+display: none;
+}
+.panelMisc a#PanelDfolder.over {
+background-image:url(../images/folder2.png);
+}
+.panelMisc a#PanelDfolder.initial {
+background-image:url(../images/folder1.png);
+}
+
+
+
+.panel .rightTasks{
+	display:block;
+	float: right; 
+	height: 33px;
+	width: 190px;
+	position:fixed;
+	right:0px;
+	top: 0px;
+	background-color: #eee;
+}
+.panel .rightTasks span#date {float: right; display: block; height: 33px;
+overflow: hidden; line-height: 33px; font-size: 0.85em; margin-right: 8px;}
+.panel .rightTasks a {float: right;}
+.panel .rightTasks a img {border-style: none; height: 22px; padding-top: 5px; margin-right:4px;}
+
+
+#working {
+top: 100px;
+display: block;
+width: 200px;
+padding: 14px;
+color: #ddd;
+position: absolute;
+left: 10px;
+
+}
+
+
+a.current {background-image:url(../images/panelOver.jpg);}
+
+.footerBarContainer {height: 35px; position: absolute; bottom: 0px; left: 0px; width: 100%; background-image:url("../images/opacity.png");}
+.footerBar {height: 33px; background-color: #eee; margin-top: 2px;}
+
+
+
+
+
+#headerimgs {height: 600px;}
+.headerimg {background-position:center top;
+background-repeat:no-repeat;
+height:650px;
+position:absolute;
+margin-top:33px;
+width:100%;
+visibility: hidden;
+}
+
+#headernav-outer { position:absolute; top:1px; right: 80px; margin:0 auto; width:200px; z-index: 999999;}
+#headernav { padding-left:4px; }
+
+/* CONTROLS */
+.btn { height:32px; width:32px; float:left; cursor:pointer; }
+#back { background-image:url("../images/btn_back.png"); }
+#next { background-image:url("../images/btn_next.png"); }
+#control { background-image:url("../images/btn_pause.png"); }
+
+#nav-outer { height:110px; padding-top:11px; position:relative; top:24px; background-image:url("../images/headerbg.png"); }
+
+
+#ubuntu {
+	background-color: transparent; opacity: 1; width: 100%;
+	display: block; position: absolute; top: 33px; left: 0px;
+}
+#containWrap {height: inherit; position: relative; width: 100%; background-color: transparent; opacity: 1;}
+
+
+#draggable3 {left: 60px; top: 15px;}
+h3 {margin: 0px;}
+.window {
+width: 500px; height: 300px; background-color: #eee; border: 1px solid #222; 
+}
+
+
+h3.topBar {
+background-image:url("../images/folderTop.png"); color: #333; height: 26px;
+text-align: center; position: relative; cursor: move;
+font-size: 16px;
+}
+.foreground {text-indent: -4px; color: #fff; font-size: 16px; margin: auto; text-align: center; float: left; width: 100%; position: absolute; height: 26px; left: 0px; top: 0px;}
+
+.topBarIcon {position: absolute; left: 6px; top: 5px; height: 15px; width: 15px;}
+
+/* controls */
+.controls {position: absolute; right: 0px; top: 0px; height: 26px; width: 90px;}
+.controls a {
+	display: block;
+	height: 26px;
+	padding-top: 0px;
+	float: left;
+	text-decoration: none;
+}
+.controls a.min {
+	width: 27px;
+	background-image:url(../images/folderControlsMin.png);
+	}
+.controls a.min:hover {
+	width: 27px;
+	background-image:url(../images/folderControlsMinOver.png);
+	}
+
+.controls a.max{
+	width: 28px;
+	background-image:url(../images/folderControlsMax.png);
+}
+
+.controls a.max:hover{
+	width: 28px;
+	background-image:url(../images/folderControlsMaxOver.png);
+}
+	
+.controls a.close{
+	width: 27px;
+	background-image:url(../images/folderControlsClose.png);
+}
+.controls a.close:hover{
+	width: 27px;
+	background-image:url(../images/folderControlsCloseOver.png);
+}
+
+
+

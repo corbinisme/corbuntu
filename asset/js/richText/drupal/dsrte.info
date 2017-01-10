@@ -1,0 +1,4 @@
+name = dsRTE
+description = Integrates dsRTE editor into Drupal by creating a new form element.
+version = 0.2.3
+core = 6.x

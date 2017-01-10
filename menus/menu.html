@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	
+	<title>MenuBar Attempt</title>
+	<style type="text/css">
+		@import "dojo/resources/dojo.css";
+		@import "dijit/themes/dijit.css";
+
+
+		.dijitMenuBar {
+			background-color:#eee;
+			margin:1px 0 0;
+			cursor:pointer;
+			height:1.9em;
+		}
+
+		.dijitMenuBar ul {
+			list-style-image:none;
+			list-style-type:none;
+			list-style-position:outside;
+			margin:0; padding:0;
+		}
+
+		.dijitMenuBar ul li a {
+			color:#333;
+			padding:2px 11px 2px 9px;
+			z-index:48;
+		}
+		.dijitMenuBar ul li a:hover {
+			background-color:#dedede;
+			z-index:48;
+		}
+
+		.dijitMenuBar li {
+			float:left;
+		}
+
+		.dijitMenuBar li ul {
+			border:1px solid #dedede;
+			background-color:#eee;
+			padding:2px;
+			position:absolute;
+			width:158px;
+		}
+
+		.dijitMenuBar a { display:block; }
+		.dijitMenuBar li ul li a {
+			position:relative;
+			padding:1px 9px 1px 19px;
+			width:130px;
+		}
+
+		.dijitMenuBar li ul ul {
+			margin: -1.95em 0 0 158px;
+		}
+
+		.dijitMenuBar .dijitHotKey {
+			text-decoration:underline;
+		}
+
+		.tundra .dijitMenuBar .dijitMenuHasChildren {
+			background-image:url('dijit/themes/tundra/images/treeExpand_plus.gif');
+			background-repeat:no-repeat;
+			background-position: right center;
+		}
+	</style>
+	<script src="dojo/dojo.js"></script>
+	<script type='text/javascript'>
+		dojo.addOnLoad(function(){
+		
+			var registered_hotkeys = [];
+			dojo.connect(window,"onkeypress",function(e){
+				console.log(e);
+			});
+			
+			// decorate access key:
+			dojo.query("[accessKey]")
+				.forEach(function(n){
+					var val = dojo.attr(n,"accessKey");
+//					if(dojo.indexOf(n.innerHTML.toLowerCase(), val) !== -1){
+						n.innerHTML = n.innerHTML.replace(new RegExp("[" + val + "]","i"), function(ch){
+							return '<span class="dijitHotKey">' + ch + '</span>';
+						});
+//					}
+				});
+
+			// the top-level menu bar items:
+			var tl = dojo.query(".dijitMenuBar > ul > li");
+				
+			// setup behavior for LIs
+			dojo.query(".dijitMenuBar ul > li")
+				.forEach(function(n){
+					// determine if this LI has a submenu
+					var child = dojo.query("> ul", n)[0];
+					if(child){
+						
+						if(tl.indexOf(n) === -1){
+							// this link is NOT a top-level menu item
+							dojo.query("a", n).at(0).addClass("dijitMenuHasChildren");
+						}
+
+						var func = dojo.partial(dojo.style, child, "left");
+						func("-999em");
+
+						//var timer = null;
+						dojo.connect(n, "onmouseenter", function(e){
+							//if(timer){ clearTimeout(timer); }
+							func("");
+						});
+						dojo.connect(n, "onclick", function(e){
+							func("");
+						});
+						dojo.connect(n, "onmouseleave", function(e){
+							//timer = setTimeout(function(){
+								func("-999em");
+							//}, 100);
+						});
+					}
+				});
+			
+		});
+		var foobar = function(){
+			console.log('clicked');
+		}
+	</script>
+</head>
+<body class='tundra'>
+
+	
+	<div class="dijitMenuBar">
+		<ul>
+			<li>
+				<a accessKey="f">File</a>
+				<ul>
+					<li><a onclick="foobar()">Save</a></li>
+					<li><a accessKey="a">Save As</a></li>
+
+					<li><a onclick="foobar()" accessKey="c">Close</a></li>
+				</ul>
+			</li>
+			<li>
+				<a accessKey="e">Edit</a>
+				<ul>
+					<li><a>Save2</a>
+
+						<ul>
+							<li><a>sub 1</a>
+								<ul>
+									<li><a>sub 1 - subsub 1</a></li>
+									<li><a>sub 1 - subsub 1</a></li>
+									<li><a>sub 1 - subsub 1</a></li>	
+								</ul>
+
+							</li>
+							<li><a>sub 2</a></li>
+						</ul>
+					</li>
+					<li><a>Save As2</a></li>
+					<li><a>Close2</a>
+						<ul>
+
+							<li><a>sub 1</a>
+								<ul>
+									<li><a>sub 1 - subsub 1</a></li>
+									<li><a>sub 1 - subsub 1</a></li>
+									<li><a>sub 1 - subsub 1</a></li>	
+								</ul>
+							</li>
+
+							<li><a>sub 2</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><a accessKey="h">Help</a></li>
+		</ul>
+	</div>
+
+	
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<head>
+<script type="text/javascript" src="http://www.corbdesign.com/js/dojo/dojo.js"></script>
+<script type="text/javascript">
+  dojo.require("dijit.form.Button");
+  dojo.require("dijit.Menu");
+  //No need to dojo.require dijit.MenuItem, since it is included in
+  //the dijit.Menu file
+  
+  
+  //http://dojocampus.org/explorer/#Dijit_Form%20Controls_Button_Dropdown%20Menu
+</script>
+</head>
+
+<body>
+<div dojoType="dijit.form.DropDownButton" iconClass="noteIcon">
+  <span>Edit<b>!</b></span>
+  <div dojoType="dijit.Menu">
+    <div dojoType="dijit.MenuItem"  iconClass="dijitEditorIcon dijitEditorIconCut"
+      onClick="console.log('not actually cutting anything, just a test!')">Cut</div>
+    <div dojoType="dijit.MenuItem"  iconClass="dijitEditorIcon dijitEditorIconCopy"
+      onClick="console.log('not actually copying anything, just a test!')">Copy</div>
+    <div dojoType="dijit.MenuItem"  iconClass="dijitEditorIcon dijitEditorIconPaste"
+      onClick="console.log('not actually pasting anything, just a test!')">Paste</div>
+    <div dojoType="dijit.MenuSeparator"></div>
+    <div dojoType="dijit.PopupMenuItem">
+      <span>Submenu</span>
+      <div dojoType="dijit.Menu" id="submenu2">
+        <div dojoType="dijit.MenuItem" onClick="console.log('Submenu 1!')">Submenu Item One</div>
+        <div dojoType="dijit.MenuItem" onClick="console.log('Submenu 2!')">Submenu Item Two</div>
+        <div dojoType="dijit.PopupMenuItem">
+          <span>Deeper Submenu</span>
+          <div dojoType="dijit.Menu" id="submenu4"">
+            <div dojoType="dijit.MenuItem" onClick="console.log('Sub-submenu 1!')">Sub-sub-menu Item One</div>
+            <div dojoType="dijit.MenuItem" onClick="console.log('Sub-submenu 2!')">Sub-sub-menu Item Two</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

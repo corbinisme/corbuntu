@@ -1,0 +1,500 @@
+
+
+/* ///// normal folder //// */
+#Pfolder {
+	position: absolute;
+	top: 80px;
+	left: 100px;
+	min-width: 600px;
+	height: 500px;
+	width: 883px;
+	z-index: 103;
+	display: none;
+	
+}
+#Pfolder div#Phandle {display: block; height: 26px; position: relative; width: 883px;}
+#Pfolder span {
+	display: block;
+	float: left;
+	height: 26px;
+	}
+#Pfolder span#PedgeL {
+	background-image:url(../images/folderEdgeL.png);
+	background-repeat: no-repeat;
+	width: 8px;
+	display: block; 
+	float: left;
+}
+
+#Pfolder span#PiconZone {
+	background-image:url(../images/folderTop.png);
+	background-repeat: repeat-x;
+	width: 82px;
+	float: left;
+}
+#Pfolder span#PiconZone img.icon {
+	padding-top: 5px;
+}
+#Pfolder span#PtitleZone {
+	background-image:url(../images/folderTop.png);
+	background-repeat: repeat-x;
+	text-align: center;
+	color: #eee;
+	font-weight: bold;
+	line-height: 26px;
+	float: left;
+}
+
+#Pfolder span#PtitleZone  span{
+	float: none;
+	position: absolute;
+	top: 0px;
+	height: 26px;
+}
+
+#Pfolder span#PtitleZone  span.over{
+	left: 46.9%;
+	line-height: 26px;
+	}
+#Pfolder span#PtitleZone  span.under{
+	left: 47%;
+	line-height: 28px;
+	color: #222;
+	}
+
+	
+	
+#Pfolder span#PtitleZone.normal {
+	width: 700px;
+	}
+
+	
+/* controls */
+#Pfolder span#PcontrolZone {
+	width: 82px;
+	background-image:url(../images/folderTop.png);
+}
+#Pfolder span#PcontrolZone.normal {
+	float: left;
+	}
+	
+#Pfolder span#PcontrolZone a {
+	display: block;
+	height: 26px;
+	padding-top: 0px;
+	float: left;
+	text-decoration: none;
+}
+#Pfolder span#PcontrolZone a.min {
+	width: 27px;
+	background-image:url(../images/folderControlsMin.png);
+	}
+#Pfolder span#PcontrolZone a.min:hover {
+	width: 27px;
+	background-image:url(../images/folderControlsMinOver.png);
+	}
+
+#Pfolder span#PcontrolZone a.max{
+	width: 28px;
+	background-image:url(../images/folderControlsMax.png);
+}
+
+#Pfolder span#PcontrolZone a.max:hover{
+	width: 28px;
+	background-image:url(../images/folderControlsMaxOver.png);
+}
+	
+#Pfolder span#PcontrolZone a.close{
+	width: 27px;
+	background-image:url(../images/folderControlsClose.png);
+}
+#Pfolder span#PcontrolZone a.close:hover{
+	width: 27px;
+	background-image:url(../images/folderControlsCloseOver.png);
+}
+
+/* edge */
+#Pfolder span#PedgeR {
+	background-image:url(../images/folderEdgeR.png);
+	background-repeat: no-repeat;
+	width: 8px;
+}
+#Pfolder span#PedgeR.normal {
+	float: left
+	}
+
+
+
+/* //////////// file commands ////////////////////////*/
+
+#Pfolder div#PfolderInside {width: 889px}
+#Pfolder div#PfolderInside div#PleftEdge {
+	height: 510px;
+	width: 5px;
+	background-image:url(../images/folderSideL.png);
+	float: left;
+}
+
+#Pfolder div#PfolderInside div#Preality  {
+	height: 510px;
+	width: 870px;
+	float: left;
+	background-color: #eee;
+}
+
+#Pfolder div#PfolderInside div#PrightEdge {
+	height: 510px;
+	width: 5px;
+	background-image:url(../images/folderSideR.png);
+}
+#Pfolder div#PfolderInside div#PrightEdge.normal {
+	float: left;
+	}
+
+
+
+#Pfolder div#PfileCommands {
+	display: block;
+}
+
+/*// folder file top ///*/
+#Pfolder div#PfileCommands div#PfileTop {
+	height: 28px;
+	background-color: #eee;
+}
+
+
+#Pfolder div#PfileCommands div#PfileTop div#Ptruth{
+	height: 28px;
+	width: 590px;
+	background-image:url(../images/folderFileTop.png);
+	float: left;
+	text-indent: 15px;
+	line-height: 28px;
+}
+#Pfolder div#PfileCommands div#PfileTop div#Ptruth.normal{
+	width: 870px;
+	}
+
+
+
+
+/*// folder file mid ///*/
+#Pfolder div#PfileCommands div#PfileMid{
+	height: 57px;
+	background-color: #eee;
+}
+
+#Pfolder div#PfileCommands div#PfileMid div#PtruthMid{
+	height: 57px;
+	width: 590px;
+	background-image:url(../images/folderFileMid.png);
+	float: left;
+	text-indent: 5px;
+	line-height: 57px;
+}
+#Pfolder div#PfileCommands div#PfileMid div#PtruthMid.normal{
+	width: 870px;
+	}
+#Pfolder div#PfileCommands div#PfileMid div#PtruthMid a img {border-style: none}
+#Pfolder div#PfileCommands div#PfileMid div#PtruthMid a {margin-top: 0px; font-size: 0.00001pt; display: block; float: left;}
+
+
+
+
+/*// folder file bot ///*/
+#Pfolder div#PfileCommands div#PfileBot{
+	height: 42px;
+	background-color: #eee;
+}
+
+#Pfolder div#PfileCommands div#PfileBot div#PtruthBot{
+	height: 42px;
+	width: 590px;
+	background-image:url(../images/folderFileBot.png);
+	float: left;
+	text-indent: 5px;
+	line-height: 42px;
+}
+#Pfolder div#PfileCommands div#PfileBot div#PtruthBot.normal{
+	width: 870px;
+	}
+#Pfolder span#PtitleZone {cursor:default} /* or move */
+
+
+
+
+
+
+
+
+/* /// maxinimzed / minimized folder /// */
+#Pfolder div#Phandle span#PedgeL {}
+
+#Pfolder span#PtitleZone.max {
+	width: 100%;
+	}
+#Pfolder div#PfileCommands div#PfileTop div#Ptruth.max{
+	width: 100%;
+	}
+#Pfolder div#PfileCommands div#PfileMid div#PtruthMid.max{
+	width: 100%;
+	}
+#Pfolder div#PfileCommands div#PfileMid div#PtruthBot.max{
+	width: 100%;
+	}
+
+#Pfolder div#Pcontents div#sideBar.max {
+	height: 900px; /* get height of browser - 26px */
+}
+#Pfolder span#PedgeR.max {
+	float: right;
+	background-image:url(../images/folderTop.png);
+	display: none;
+}
+#Pfolder span#PcontrolZone.max {
+	float: right;
+	padding-right: 2px;
+}
+
+#Pfolder div#PfolderInside div#PrightEdge.max {
+	float: right;
+	}
+
+#Pfolder div#Pcontents div#PmainContent div#Pframe.max{
+	width: 898px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* //// content stuff /// */
+#Pfolder div#Pcontents {
+	border-top: 1px solid #999;
+	border-bottom: 0px solid #999;
+	height: 373px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	background-color: #fff;
+}
+#Pfolder div#Pcontents div#sideBar {
+	display: block;
+	float: left;
+	width: 151px;
+	border-right:0px solid #eee;
+	background-color: #fff;
+}
+#Pfolder div#Pcontents div#sideBar.normal {
+	height: 375px;
+}
+
+#Pfolder div#Pcontents div#sideBar div.leftEdge {
+	height: 201px;
+	width: 5px;
+	background-image:url(../images/folderSideL.png);
+	float: left;
+}
+#Pfolder div#Pcontents div#sideBar div#tree {
+	float: left;
+	width:148px;
+	height: 201px;
+	background-color: #fff;
+	border-bottom: 0px solid #fff;
+	padding-bottom: 2px;
+}
+
+#Pfolder div#Pcontents div#PmainContent {
+	background-color: #fff;
+}
+
+#Pfolder div#Pcontents div#PmainContent div#Pframe {
+	float: left;
+	height: 375px;
+	background-color: #fff;
+	border-left: 2px solid #eee;
+}
+#Pfolder div#Pcontents div#PmainContent div#Pframe.normal {
+	width: 713px;
+}
+
+
+
+.pad {padding-left: 5px; padding-right: 5px;}
+.border {border-top: 1px solid #999; border-bottom: 1px solid #999;}
+
+#Pfolder div#Pfooter {
+	height: 35px;
+	border-bottom: 1px solid #000;
+	clear: both;
+}
+#Pfolder div#Pfooter div.left {
+	width: 5px;
+	background-image:url(../images/folderSideL.png);
+	float: left;
+	height: 35px;
+	display: block;
+}
+#Pfolder div#Pfooter div#Pfoot{
+	width: 870px;
+	background-color: #eee;
+	float: left;
+	height: 34px;
+	display: block;
+	border-top: 1px solid #999;
+	line-height: 30px;
+	color: #222;
+	font-size: 0.9em;
+}
+
+
+#Pfolder div#Pfooter div.right {
+	width: 5px;
+	background-image:url(../images/folderSideR.png);
+	float: left;
+	height: 35px;
+	display: block;
+	background-repeat: repeat-y;
+}
+
+#Zombies {
+z-index: 999;
+display: none;
+margin-top: 33px;
+border: 1px solid #000;
+background-image:url(../images/opacity.png);
+margin-left: 3px;
+margin-right: 3px;
+
+
+}
+#Zombies div#bar {
+height: 26px;
+border-bottom: 1px solid #333;
+background-image:url(../images/folderTop.png);
+background-position: center center;
+width: auto;
+background-repeat: repeat-x;
+}
+
+#Zombies div#bar span#ZcontrolZone {
+	width: 82px;
+	background-image:url(../images/folderTop.png);
+	float: right;
+	margin-right: 5px;
+}
+
+	
+#Zombies div#bar span#ZcontrolZone a {
+	display: block;
+	height: 26px;
+	padding-top: 0px;
+	float: left;
+	text-decoration: none;
+	border: 0px solid #333;
+
+}
+#Zombies div#bar span#ZcontrolZone a.min {
+	width: 27px;
+	background-image:url(../images/folderControlsMin.png);
+	}
+#Zombies div#bar span#ZcontrolZone a.min:hover {
+	width: 27px;
+	background-image:url(../images/folderControlsMinOver.png);
+	}
+
+#Zombies div#bar span#ZcontrolZone a.max{
+	width: 28px;
+	background-image:url(../images/folderControlsMax.png);
+}
+
+#Zombies div#bar span#ZcontrolZone a.max:hover{
+	width: 28px;
+	background-image:url(../images/folderControlsMaxOver.png);
+}
+	
+#Zombies div#bar span#ZcontrolZone a.close{
+	width: 27px;
+	background-image:url(../images/folderControlsClose.png);
+}
+#Zombies div#bar span#ZcontrolZone a.close:hover{
+	width: 27px;
+	background-image:url(../images/folderControlsCloseOver.png);
+}
+#Zombies div#range {width: 100%; height: auto}
+#Zombies div#loading {
+position: absolute;
+left: 60px;
+top: 160px;
+width: 200px;
+height: 50px;
+line-height: 50px;
+color: #eee;
+background-image:url(../images/opacity.png);
+border: 1px solid lime;
+text-indent: 20px;
+}
+#zombRoot1{position: relative; width: 105px;}
+#zombHand1 {cursor: pointer; width: 100px;}
+#zombRoot2{position: relative; width: 105px;}
+#zombHand2 {cursor: pointer; width: 100px;}
+
+
+#Pfolder div#Pcontents div#sideBar div#tree {height: auto}
+#Pfolder div#Pcontents div#sideBar div#tree a {
+	display: block;
+	width: 100%;
+	height: 33px;
+	margin-bottom: 1px;
+	text-indent: 0px;
+	line-height: 33px;
+	color: #222;
+	text-decoration:none;
+	}
+
+#Pfolder div#Pcontents div#sideBar div#tree a.marg{
+	margin-top: 41px;
+}
+
+#Pfolder div#Pcontents div#sideBar div#tree a:hover {
+	background-image:url(../images/panelOver.jpg);
+	}
+#Pfolder div#Pcontents div#sideBar div#tree a.mainTree{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	background-color: #ddd;
+	text-decoration: none;
+	font-weight: bold;
+	color: #222;
+	border:1px solid #555;
+	width: 100%;
+	text-indent: 15px;
+}
+
+#Pfolder div#Pcontents div#sideBar div#tree a.mainTree span{
+	float: right;
+	margin-right: 10px;
+	
+}
+#Pfolder div#Pcontents div#sideBar div#tree a.mainTree:hover {
+	background-image:none;
+	background-color: #ccc;
+}
+
+#Pfolder div#Pcontents div#sideBar div#tree a span.placesIcon {
+	display: block;
+	float: left;
+	width: 30px;
+	/*background-color: #333;*/
+	height: 33px;
+	margin-right: 4px;
+}
+#Pfolder div#Pcontents div#sideBar div#tree a img {border-style: none}

@@ -1,0 +1,420 @@
+
+
+/* ///// normal folder //// */
+#Dfolder {
+	position: absolute;
+	top: 70px;
+	left: 380px;
+	min-width: 600px;
+	height: 500px;
+	width: 883px;
+	z-index: 103;
+	display: none;
+	
+}
+#Dfolder div#Dhandle {display: block; height: 26px; position: relative; width: 883px;}
+#Dfolder span {
+	display: block;
+	float: left;
+	height: 26px;
+	}
+#Dfolder span#DedgeL {
+	background-image:url(../images/folderEdgeL.png);
+	background-repeat: no-repeat;
+	width: 8px;
+	display: block; 
+	float: left;
+}
+
+#Dfolder span#DiconZone {
+	background-image:url(../images/folderTop.png);
+	background-repeat: repeat-x;
+	width: 82px;
+	float: left;
+}
+#Dfolder span#DiconZone img.icon {
+	padding-top: 5px;
+}
+#Dfolder span#DtitleZone {
+	background-image:url(../images/folderTop.png);
+	background-repeat: repeat-x;
+	text-align: center;
+	color: #eee;
+	font-weight: bold;
+	line-height: 26px;
+	float: left;
+}
+
+#Dfolder span#DtitleZone  span{
+	float: none;
+	position: absolute;
+	top: 0px;
+	height: 26px;
+}
+
+#Dfolder span#DtitleZone  span.over{
+	left: 46.9%;
+	line-height: 26px;
+	}
+#Dfolder span#DtitleZone  span.under{
+	left: 47%;
+	line-height: 28px;
+	color: #222;
+	}
+
+	
+	
+#Dfolder span#DtitleZone.normal {
+	width: 700px;
+	}
+
+	
+/* controls */
+#Dfolder span#DcontrolZone {
+	width: 82px;
+	background-image:url(../images/folderTop.png);
+}
+#Dfolder span#DcontrolZone.normal {
+	float: left;
+	}
+	
+#Dfolder span#DcontrolZone a {
+	display: block;
+	height: 26px;
+	padding-top: 0px;
+	float: left;
+	text-decoration: none;
+}
+#Dfolder span#DcontrolZone a.min {
+	width: 27px;
+	background-image:url(../images/folderControlsMin.png);
+	}
+#Dfolder span#DcontrolZone a.min:hover {
+	width: 27px;
+	background-image:url(../images/folderControlsMinOver.png);
+	}
+
+#Dfolder span#DcontrolZone a.max{
+	width: 28px;
+	background-image:url(../images/folderControlsMax.png);
+}
+
+#Dfolder span#DcontrolZone a.max:hover{
+	width: 28px;
+	background-image:url(../images/folderControlsMaxOver.png);
+}
+	
+#Dfolder span#DcontrolZone a.close{
+	width: 27px;
+	background-image:url(../images/folderControlsClose.png);
+}
+#Dfolder span#DcontrolZone a.close:hover{
+	width: 27px;
+	background-image:url(../images/folderControlsCloseOver.png);
+}
+
+/* edge */
+#Dfolder span#DedgeR {
+	background-image:url(../images/folderEdgeR.png);
+	background-repeat: no-repeat;
+	width: 8px;
+}
+#Dfolder span#DedgeR.normal {
+	float: left
+	}
+
+
+
+/* //////////// file commands ////////////////////////*/
+
+#Dfolder div#DfolderInside {width: 889px}
+#Dfolder div#DfolderInside div#DleftEdge {
+	height: 510px;
+	width: 5px;
+	background-image:url(../images/folderSideL.png);
+	float: left;
+}
+
+#Dfolder div#DfolderInside div#Dreality  {
+	height: 510px;
+	width: 870px;
+	float: left;
+	background-color: #eee;
+}
+
+#Dfolder div#DfolderInside div#DrightEdge {
+	height: 510px;
+	width: 5px;
+	background-image:url(../images/folderSideR.png);
+}
+#Dfolder div#DfolderInside div#DrightEdge.normal {
+	float: left;
+	}
+
+
+
+#Dfolder div#DfileCommands {
+	display: block;
+}
+
+/*// folder file top ///*/
+#Dfolder div#DfileCommands div#DfileTop {
+	height: 28px;
+	background-color: #eee;
+}
+
+
+#Dfolder div#DfileCommands div#DfileTop div#Dtruth{
+	height: 28px;
+	width: 590px;
+	background-image:url(../images/folderFileTop.png);
+	float: left;
+	text-indent: 15px;
+	line-height: 28px;
+}
+#Dfolder div#DfileCommands div#DfileTop div#Dtruth.normal{
+	width: 870px;
+	}
+
+
+
+
+/*// folder file mid ///*/
+#Dfolder div#DfileCommands div#DfileMid{
+	height: 57px;
+	background-color: #eee;
+}
+
+#Dfolder div#DfileCommands div#DfileMid div#DtruthMid{
+	height: 57px;
+	width: 590px;
+	background-image:url(../images/folderFileMid.png);
+	float: left;
+	text-indent: 5px;
+	line-height: 57px;
+}
+#Dfolder div#DfileCommands div#DfileMid div#DtruthMid.normal{
+	width: 870px;
+	}
+#Dfolder div#DfileCommands div#DfileMid div#DtruthMid a img {border-style: none}
+#Dfolder div#DfileCommands div#DfileMid div#DtruthMid a {margin-top: 0px; font-size: 0.00001pt; display: block; float: left;}
+
+
+
+
+/*// folder file bot ///*/
+#Dfolder div#DfileCommands div#DfileBot{
+	height: 42px;
+	background-color: #eee;
+}
+
+#Dfolder div#DfileCommands div#DfileBot div#DtruthBot{
+	height: 42px;
+	width: 590px;
+	background-image:url(../images/folderFileBot.png);
+	float: left;
+	text-indent: 5px;
+	line-height: 42px;
+}
+#Dfolder div#DfileCommands div#DfileBot div#DtruthBot.normal{
+	width: 870px;
+	}
+#Dfolder span#DtitleZone {cursor:default} /* or move */
+
+
+
+
+
+
+
+
+/* /// maxinimzed / minimized folder /// */
+#Dfolder div#Dhandle span#DedgeL {}
+
+#Dfolder span#DtitleZone.max {
+	width: 100%;
+	}
+#Dfolder div#DfileCommands div#DfileTop div#Dtruth.max{
+	width: 100%;
+	}
+#Dfolder div#DfileCommands div#DfileDid div#DtruthDid.max{
+	width: 100%;
+	}
+#Dfolder div#DfileCommands div#DfileDid div#DtruthBot.max{
+	width: 100%;
+	}
+
+#Dfolder div#Dcontents div#DsideBar.max {
+	height: 900px; /* get height of browser - 26px */
+}
+#Dfolder span#DedgeR.max {
+	float: right;
+	background-image:url(../images/folderTop.png);
+	display: none;
+}
+#Dfolder span#DcontrolZone.max {
+	float: right;
+	padding-right: 2px;
+}
+
+#Dfolder div#DfolderInside div#DrightEdge.max {
+	float: right;
+	}
+
+#Dfolder div#Dcontents div#DmainContent div#Dframe.max{
+	width: 898px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* //// content stuff /// */
+#Dfolder div#Dcontents {
+	border-top: 1px solid #999;
+	border-bottom: 0px solid #999;
+	height: 373px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	background-color: #fff;
+}
+#Dfolder div#Dcontents div#DsideBar {
+	display: block;
+	float: left;
+	width: 151px;
+	border-right:0px solid #eee;
+	background-color: #fff;
+}
+#Dfolder div#Dcontents div#DsideBar.normal {
+	height: 375px;
+}
+
+#Dfolder div#Dcontents div#DsideBar div.leftEdge {
+	height: 201px;
+	width: 5px;
+	background-image:url(../images/folderSideL.png);
+	float: left;
+}
+#Dfolder div#Dcontents div#DsideBar div#tree {
+	float: left;
+	width:148px;
+	height: 201px;
+	background-color: #fff;
+	border-bottom: 0px solid #fff;
+	padding-bottom: 2px;
+}
+
+#Dfolder div#Dcontents div#DmainContent {
+	background-color: #fff;
+}
+
+#Dfolder div#Dcontents div#DmainContent div#Dframe {
+	float: left;
+	height: 375px;
+	background-color: #fff;
+	border-left: 2px solid #eee;
+}
+#Dfolder div#Dcontents div#DmainContent div#Dframe.normal {
+	width: 713px;
+}
+
+
+
+.pad {padding-left: 5px; padding-right: 5px;}
+.border {border-top: 1px solid #999; border-bottom: 1px solid #999;}
+
+#Dfolder div#Dfooter {
+	height: 35px;
+	border-bottom: 1px solid #000;
+	clear: both;
+}
+#Dfolder div#Dfooter div.left {
+	width: 5px;
+	background-image:url(../images/folderSideL.png);
+	float: left;
+	height: 35px;
+	display: block;
+}
+#Dfolder div#Dfooter div#Dfoot{
+	width: 870px;
+	background-color: #eee;
+	float: left;
+	height: 34px;
+	display: block;
+	border-top: 1px solid #999;
+	line-height: 30px;
+	color: #222;
+	font-size: 0.9em;
+}
+
+
+#Dfolder div#Dfooter div.right {
+	width: 5px;
+	background-image:url(../images/folderSideR.png);
+	float: left;
+	height: 35px;
+	display: block;
+	background-repeat: repeat-y;
+}
+
+
+
+
+#Dfolder div#Dcontents div#DsideBar div#tree {height: auto}
+#Dfolder div#Dcontents div#DsideBar div#tree a {
+	display: block;
+	width: 100%;
+	height: 33px;
+	margin-bottom: 1px;
+	text-indent: 0px;
+	line-height: 33px;
+	color: #222;
+	text-decoration:none;
+	}
+
+#Dfolder div#Dcontents div#DsideBar div#tree a.marg{
+	margin-top: 41px;
+}
+
+#Dfolder div#Dcontents div#DsideBar div#tree a:hover {
+	background-image:url(../images/panelOver.jpg);
+	}
+#Dfolder div#Dcontents div#DsideBar div#tree a.mainTree{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	background-color: #ddd;
+	text-decoration: none;
+	font-weight: bold;
+	color: #222;
+	border:1px solid #555;
+	width: 100%;
+	text-indent: 15px;
+}
+
+#Dfolder div#Dcontents div#DsideBar div#tree a.mainTree span{
+	float: right;
+	margin-right: 10px;
+	
+}
+#Dfolder div#Dcontents div#DsideBar div#tree a.mainTree:hover {
+	background-image:none;
+	background-color: #ccc;
+}
+
+#Dfolder div#Dcontents div#DsideBar div#tree a span.placesIcon {
+	display: block;
+	float: left;
+	width: 30px;
+	/*background-color: #333;*/
+	height: 33px;
+	margin-right: 4px;
+}
+#Dfolder div#Dcontents div#DsideBar div#tree a img {border-style: none}

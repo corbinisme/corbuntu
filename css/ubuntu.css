@@ -1,0 +1,276 @@
+
+html {overflow: hidden}
+body { 
+	margin: 0px;
+	padding: 0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:100%;
+	
+}
+body.normal {
+	background-image:url(../backgrounds/simple-ubuntu.jpg);
+}
+body.ubu1 {
+	background-image:url(../backgrounds/warty.jpg);
+}
+
+	
+a {outline:none}
+#panelContainer {
+	height: 35px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	display:block;
+	background-image:url(../images/opacity.png);
+	z-index: 104;
+}
+#panel {
+	position:absolute;
+	top:0px;
+	left: 0px;
+	height: 33px;
+	display:block;
+	width:100%;
+	z-index:105;
+}
+#panel.default {
+	background-color: #efebe7;
+	opacity: 1;
+}
+
+#panel #nav {
+	float: left;
+	width: 310px;
+	height: 33px;
+	display:block;
+	line-height:33px;
+}
+
+
+#panel #nav ul.MenuBarHorizontal
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 100%;
+	cursor: default;
+	width: auto;
+}
+
+#panel #nav ul.MenuBarActive
+{
+	z-index: 1000;
+}
+
+#panel #nav ul.MenuBarHorizontal li
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 100%;
+	position: relative;
+	text-align: left;
+	cursor: pointer;
+	width: 65px;
+	float: left;
+	height: 33px;
+}
+#panel #nav ul.MenuBarHorizontal li.appButton {width: 140px}
+
+ #panel #nav ul.MenuBarHorizontal ul
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 100%;
+	z-index: 1020;
+	cursor: default;
+	width: 180px;
+	position: absolute;
+	top: 35px;
+	left: -1000em;
+} 
+
+#panel #nav ul.MenuBarHorizontal ul.MenuBarSubmenuVisible
+{
+	left: auto;
+}
+/* Menu item containers are same fixed width as parent */
+#panel #nav ul.MenuBarHorizontal ul li
+{
+	width: 180px;
+}
+/* Submenus should appear slightly overlapping to the right (95%) and up (-5%) */
+#panel #nav ul.MenuBarHorizontal ul ul
+{
+	position: absolute;
+	margin: -1% 0 0 95%;
+}
+
+#panel #nav ul.MenuBarHorizontal ul li.break {
+	height: 10px;
+}
+/* Submenu that is showing with class designation MenuBarSubmenuVisible, we set left to 0 so it comes onto the screen */
+#panel #nav ul.MenuBarHorizontal ul.MenuBarSubmenuVisible ul.MenuBarSubmenuVisible
+{
+	left: auto;
+	top: 0;
+}
+
+/* Submenu containers have borders on all sides */
+#panel #nav ul.MenuBarHorizontal ul
+{
+	border: 1px solid #CCC;
+}
+/* Menu items are a light gray block with padding and no text decoration */
+#panel #nav ul.MenuBarHorizontal a
+{
+	display: block;
+	cursor: pointer;
+	background-color: #EEE;
+	display:block;
+	float: left;
+	height: 33px;
+	width: 180px;
+	text-decoration:none;
+	color: #222;
+	font-weight: bold;
+	font-size: 0.85em;
+	text-align:left;
+	text-indent: 5px;
+	border-right: 1px solid transparent;
+	border-left: 1px solid transparent;
+}
+#panel #nav ul.MenuBarHorizontal a.top {width: 65px; text-align: center; text-indent: 0px;}
+/* Menu items that have mouse over or focus have a blue background and white text */
+
+
+#panel #nav ul.MenuBarHorizontal a.app {
+	width: 140px;
+	padding-left: 0px;
+	background-repeat:no-repeat;
+	margin-left: 0px;
+	text-align: center;
+	text-indent: 0px;
+}
+#panel #nav ul.MenuBarHorizontal a.app span.logo {
+	display:block;
+	background-image:url(../images/logo.png);
+	height: 30px;
+	background-position: 0px 3px;
+	background-repeat:no-repeat;
+	width: 30px;
+	float: left;
+	margin-left: 8px;
+	
+}
+#panel #nav ul.MenuBarHorizontal a span.over {
+	background-image:url(../SpryAssets/SpryMenuBarRight.gif);
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 5px;
+	dispplay: block;
+	margin-right: 5%;
+	height: 35px;
+	float: right;
+	}
+
+#panel #nav ul.MenuBarHorizontal a span.icon {
+	display: block;
+	height: 35px;
+	background-color: #444;
+	width: 25px;
+	float: left;
+}
+#panel #nav ul.MenuBarHorizontal a:hover, #panel #nav ul.MenuBarHorizontal a:focus {
+	background-image:url(../images/panelOver.jpg);
+	background-repeat:repeat-x;
+	border-right: 1px solid #f7c982;
+	border-left: 1px solid #f7c982;
+}
+/* Menu items that are open with submenus are set to MenuBarItemHover with a blue background and white text */
+#panel #nav ul.MenuBarHorizontal a.MenuBarItemHover, #panel #nav ul.MenuBarHorizontal a.MenuBarItemSubmenuHover, #panel #nav ul.MenuBarHorizontal a.MenuBarSubmenuVisible
+{
+	background-image:url(../images/panelOver.jpg);
+	background-repeat:repeat-x;
+	border-right: 1px solid #f7c982;
+	border-left: 1px solid #f7c982;
+}
+
+
+/* HACK FOR IE: to make sure the sub menus show above form controls, we underlay each submenu with an iframe */
+#panel #nav ul.MenuBarHorizontal iframe
+{
+	position: absolute;
+	z-index: 1010;
+	filter:alpha(opacity:0.1);
+}
+/* HACK FOR IE: to stabilize appearance of menu items; the slash in float is to keep IE 5.0 from parsing */
+@media screen, projection
+{
+	#panel #nav ul.MenuBarHorizontal li.MenuBarItemIE
+	{
+		display: inline;
+		f\loat: left;
+		background: #FFF;
+	}
+}
+
+
+#panel #quickLaunch {
+	float: left;
+	display:block;
+	height: 33px;
+	line-height:33px;
+	font-size:0.85em;
+	font-weight:bold;
+}
+#panel #quickLaunch a img {
+	border-style: none; 
+	height: 28px; 
+	padding-top: 3px;
+}
+
+#panel #panelMisc {display: block; float: left;}
+#panel #panelMisc span#colons {height: 28px; font-size: 0.5em; display: block; float: left; width: 25px; text-indent: 10px;}
+#panel #panelMisc span#colons p { margin-bottom: 0px; margin-top: 0px; }
+#panel #panelMisc span#windows {float: left; display: block;}
+#panel #panelMisc a {display: block; float: left}
+#panel #panelMisc a img {border-style: none;}
+#panel #panelMisc a span.panelImg {display: block; float: left; width: 25px;}
+#panel #panelMisc a span.panelName{display: block; float: left; }
+#panel #panelMisc a#desktop {margin-top: 3px}
+#panel #panelMisc a#PanelPfolder {
+margin-left: 10px;
+width: 148px;
+background-repeat: no-repeat;
+height: 23px;
+margin-top: 5px;
+line-height: 23px;
+text-indent: 10px;
+color: #333;
+font-size: 0.8em;
+font-weight: normal;
+text-decoration: none;
+}
+
+#panel #panelMisc a#PanelPfolder.over {
+background-image:url(../images/folder2.png);
+}
+#panel #panelMisc a#PanelPfolder.initial {
+background-image:url(../images/folder1.png);
+}
+
+#panel #right {
+	display:block;
+	float: right; 
+	height: 33px;
+	width: 300px;
+}
+#panel #right span#date {float: right; display: block; height: 33px;
+overflow: hidden; line-height: 33px; font-size: 0.85em; margin-right: 8px;}
+#panel #right a {float: right;}
+#panel #right a img {border-style: none; height: 22px; padding-top: 5px; margin-right:4px;}
+

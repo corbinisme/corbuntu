@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ubuntu in a Browser</title>
+
+<link rel="stylesheet" href="css/folder.css" />
+<link rel="stylesheet" href="css/lytebox.css" />
+<link rel="stylesheet" href="css/panel.css" />
+<link rel="stylesheet" href="css/music.css" />
+<link rel="stylesheet" href="css/documents.css" />
+<link rel="stylesheet" href="css/firefox.css" />
+<link rel="stylesheet" href="css/jqueryUI.css" />
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="css/IE.css" />
+<![endif]-->
+
+
+<script type="text/javascript">
+var z = 100;
+</script>
+
+<script src="js/jquery1.4.2min.js" type="text/javascript"></script>
+<script src="js/jquery-ui1.8.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/ubuntu.js"></script>
+<script type="text/javascript" src="js/dom-drag.js"></script>
+<script type="text/javascript" src="js/lytebox.js"></script>
+
+<!--[if IE]>
+<script type="text/javascript" src="SpryAssets/SpryMenuBarIE.js"></script>
+<![endif]-->
+
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+</head>
+
+<body class="normal tundra">
+
+<!-- top panel ///////////////////////////-->
+
+<div id="panelContainer"></div>
+<div id="panel" class="default">
+	<div id="nav">
+
+<ul id="MenuBar1" class="MenuBarHorizontal">
+ 
+ 
+  <li class="appButton"><a class="MenuBarItemSubmenu app" href="#"><span class="logo"></span>Applications</a>
+    <ul>
+      <li><a class="MenuBarItemSubmenu" href="#"><span class="icon"><img src="images/MenuAccessories.png" /></span>Accessories<span class="over"></span></a>
+        <ul>
+          <li><a href="#"><span class="icon"><img src="images/MenuCalculator.png" /></span>Calculator</a></li>
+          <li><a href="#"><span class="icon"><img src="images/MenuMousepad.png" /></span>Mousepad</a></li>
+		  <li><a href="#"><span class="icon"><img src="images/MenuTerminal.png" /></span>Terminal</a></li>
+		  <li><a href="#"><span class="icon"><img src="images/MenuTextEdit.png" /></span>Text Editor</a></li>
+		  <li><a href="#"><span class="icon"><img src="images/MenuTomboy.png" /></span>Tomboy Notes</a></li>
+        </ul>
+      </li>
+      <li><a class="MenuBarItemSubmenu" href="#"><span class="icon"><img src="images/MenuGames.png" /></span>Games<span class="over"></span></a>
+        <ul>
+          <li><a href="#"><span class="icon"><img src="images/Menufolder.png" /></span>Playroom</a></li>
+          <li><a href="#"><span class="icon"><img src="images/Menufolder.png" /></span>SuperTux</a></li>
+		  <li><a href="#"><span class="icon"><img src="images/Menufolder.png" /></span>Tapir Shooter</a></li>
+		  <li><a href="#"><span class="icon"><img src="images/Menufolder.png" /></span>Jar Jar Binks Hunter</a></li>
+		  <li><a href="#"><span class="icon"><img src="images/Menufolder.png" /></span>Tower Logic</a></li>
+		  <li><a href="#"><span class="icon"><img src="images/Menufolder.png" /></span>Pong</a></li>
+        </ul>
+      </li>
+       <li><a class="MenuBarItemSubmenu" href="#"><span class="icon"><img src="images/MenuGraphics.png" /></span>Graphics<span class="over"></span></a>
+        <ul>
+          <li><a href="#"><span class="icon"><img src="images/MenuGraphics.png" /></span>Gimp Image Editor</a></li>
+          <li><a href="#"><span class="icon"><img src="images/MenuGraphics.png" /></span>Zombie Paint</a></li>
+        </ul>
+      </li>
+       <li><a class="MenuBarItemSubmenu" href="#"><span class="icon"><img src="images/MenuInternet.png" /></span>Internet<span class="over"></span></a>
+        <ul>
+          <li><a href="#" onclick="ShowDiv('firefox')"><span class="icon"><img src="images/MenuFirefox.png" /></span>Firefox Web Browser</a></li>
+          <li><a href="#"><span class="icon"><img src="images/MenuChrome.png" /></span>Google Chrome</a></li>
+		  <li><a href="#"><span class="icon"><img src="images/MenuThunderbird.png" /></span>Mozilla Thunderbird</a></li>
+        </ul>
+      </li>
+	  <li><a class="MenuBarItemSubmenu" href="#"><span class="icon"><img src="images/MenuSound.png" /></span>Sound &amp; Video<span class="over"></span></a>
+        <ul>
+          <li><a href="#"><span class="icon"><img src="images/MenuAudacity.png" /></span>Audacity</a></li>
+		  <li><a href="#"><span class="icon"><img src="images/MenuMplayer.png" /></span>GNOME MPlayer</a></li>
+          <li><a href="#"><span class="icon"><img src="images/MenuVLC.png" /></span>VLC</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  
+
+  
+  
+   <li><a class="MenuBarItemSubmenu top" href="#">Places</a>
+    <ul>
+        <li><a href="#" ><span class="icon"><img src="images/MenuHome.png" /></span>Home</a></li>
+        <li><a href="#"><span class="icon"><img src="images/MenuDesktop.png" /></span>Desktop</a></li>
+        <li><a href="#" onClick="fileFrame('documents'); ShowDiv('Dfolder')"><span class="icon"><img src="images/Menufolder.png" /></span>Documents</a></li>
+        <li><a href="#" id="MenuMusic" onClick="fileFrame('music'); ShowDiv('Mfolder')"><span class="icon"><img src="images/Menufolder.png" /></span>Music</a></li> 
+        <li><a href="#" id="MenuPictures" onClick="fileFrame('pictures'); ShowDiv('Pfolder')"><span class="icon"><img src="images/Menufolder.png" /></span>Pictures</a></li>
+        <li><a href="#" id="MenuVideos"><span class="icon"><img src="images/Menufolder.png" /></span>Videos</a></li>
+        <li class="break"></li>
+		
+        <li><a href="#"><span class="icon"><img src="images/MenuComputer.png" /></span>Computer</a></li>
+        <li><a href="#"><span class="icon"><img src="images/MenuFloppy.png" /></span>Floppy Drive</a></li>
+        <li class="break"></li>
+		
+        <li><a href="#"><span class="icon"><img src="images/MenuNetwork.png" /></span>Network</a></li>
+        <li><a href="#"><span class="icon"><img src="images/MenuServer.png" /></span>Connect to Server</a></li>
+        <li class="break"></li>
+		
+        <li><a href="#"><span class="icon"><img src="images/MenuSearch.png" /></span>Search for Files...</a></li>
+    </ul>
+  </li>
+ 
+  
+   <li><a class="MenuBarItemSubmen top" href="#">System</a>
+    <ul id="systemUL">
+        <li><a class="MenuBarItemSubmenu" href="#"><span class="icon"><img src="images/MenuPreferences.png" /></span>Preferences<span class="over"></span></a>
+        <ul>
+          <li><a href="#"><span class="icon"><img src="images/MenuAboutMe.png" /></span>About Me</a></li>
+          <li><a href="#"><span class="icon"><img src="images/MenuAppearance.png" /></span>Appareance</a></li>
+		  <li><a href="#"><span class="icon"><img src="images/MenuDisplay.png" /></span>Display</a></li>
+		  <li><a href="#"><span class="icon"><img src="images/MenuScreensaver.png" /></span>Screensaver</a></li>
+		  <li><a href="#"><span class="icon"><img src="images/MenuPower.png" /></span>Power Management</a></li>
+        </ul>
+      </li>
+        <li><a class="MenuBarItemSubmenu" href="#"><span class="icon"><img src="images/MenuAdministration.png" /></span>Administration<span class="over"></span></a>
+        <ul>
+          <li><a href="#"><span class="icon"><img src="images/MenuLogin.png" /></span>Login Window</a></li>
+          <li><a href="#"><span class="icon"><img src="images/MenuFirewall.png" /></span>Firewall Configuration</a></li>
+		  <li><a href="#"><span class="icon"><img src="images/MenuAuthorizations.png" /></span>Authoizations</a></li>
+		  <li><a href="#"><span class="icon"><img src="images/MenuTimeDate.png" /></span>Time and Date</a></li>
+        </ul>
+      </li>
+	  <li class="break"></li>
+        <li><a  href="#"><span class="icon"><img src="images/MenuHelp.png" /></span>Help and Support</span></a></li>
+		 <li><a  href="#"><span class="icon"><img src="images/MenuAbout.png" /></span>About Corbdesign</span></a></li>
+		 <li><a  href="#" onClick="returnOpen('Zombies'); ShowDiv('Zombies')"><span class="icon"><img src="images/MenuTerminal.png" /></span>Release Zombies</span></a></li>
+		  <li><a  href="#"><span class="icon"><img src="images/MenuLogOut.png" /></span>Log Out</span></a></li>
+		   <li><a  href="#"><span class="icon"><img src="images/MenuShutDown.png" /></span>Shut Down</span></a></li>
+		    
+  
+   </li> 
+   
+</ul> <!-- end ul -->
+
+
+<script type="text/javascript">
+<!--
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gi", imgRight:"SpryAssets/SpryMenuBarRightHover.gi"});
+var MenuBar2 = new Spry.Widget.MenuBar("MenuBar2", {imgDown:"SpryAssets/SpryMenuBarDownHover.gi", imgRight:"SpryAssets/SpryMenuBarRightHover.gi"});
+//-->
+</script>
+ </div>
+    <div id="quickLaunch">
+    	<a href="#" onclick="ShowDiv('firefox')" id="fireIcon"><img src="images/firefox.png" /></a>
+        <a href="#"><img src="images/thunderbird.png" /></a>
+        <a href="#"><img src="images/vlc.png" /></a>
+        
+    </div>
+    
+    
+    <div id="right">
+    <a href="#"><img src="images/power.png" /></a>
+    	<span id="date">
+        <script>showDate()</script>
+        </span>
+        
+    	
+    </div>
+</div>
+<!-- end top panel /////////////////////-->
+<div id="headernav-outer">
+		<div id="headernav">
+			<div id="back" class="btn"></div>
+			<div id="control" class="btn"></div>
+			<div id="next" class="btn"></div>
+		</div>
+	</div>
+<div id="headerimgs">
+		<div id="headerimg1" class="headerimg"></div>
+		<div id="headerimg2" class="headerimg"></div>
+	</div>
+
+<div id="ubuntu">
+	<div id="containWrap">
+
+	<!-- pfolder -->
+	<div id="Pfolder" onclick="topside('Pfolder')" style="left: 70px; top: 40px;">
+		<div id="Phandle">
+			<span id="PedgeL">&nbsp;</span>
+			<span id="PiconZone"><img src="images/folderIcon.png" class="icon" /></span>
+			<span id="PtitleZone" class="normal">
+				<span class="under" id="Fname1">/ - My Pictures</span>
+				<span class="over" id="Fname2">/ - My Pictures</span>
+			</span>
+			<span id="PcontrolZone" class="normal">
+				<a href="#"  onClick="minimizeClose('Pfolder')" class="min">&nbsp;</a>
+				<a href="#" class="max" onClick="Maximize('Pfolder');">&nbsp;</a>
+				<a href="#" class="close" onClick="fullClose('Pfolder');">&nbsp;</a>
+			</span>
+			<span id="PedgeR" class="normal">&nbsp;</span>
+		</div>
+		
+		<!-- administrative -->
+		<div id="PfolderInside">
+			<div id="PleftEdge" class="leftEdge">&nbsp;</div>
+			<div id="Preality">
+				<div id="PfileCommands">
+					<div id="PfileTop">
+						<div id="Ptruth" class="normal"><u>F</u>ile &nbsp; <u>E</u>dit &nbsp; <u>V</u>iew &nbsp <u>G</u>o &nbsp;  <u>B</u>ookmarks</div>
+					</div>
+					
+					<div id="PfileMid">
+						<div id="PtruthMid" class="normal">
+							<a href="#" onClick=""><img src="images/AdminBack.png" /></a>
+							<a href="#" onClick=""><img src="images/AdminForward.png" /></a>
+							<a href="#" onClick=""><img src="images/AdminUp.png" /></a>
+							<a href="#" onClick=""><img src="images/AdminStop.png" /></a>
+							<a href="#" onClick=""><img src="images/AdminRefresh.png" /></a>
+							<a href="#" onClick=""><img src="images/AdminSeparator.png" /></a>
+							
+							<a href="#" onClick=""><img src="images/AdminHome.png" /></a>
+							<a href="#" onClick=""><img src="images/AdminComputer.png" /></a>
+							<a href="#" onClick=""><img src="images/AdminSeparator.png" /></a>
+							
+							<a href="#" onClick=""><img src="images/AdminSearch.png" /></a>
+						
+						
+						</div>
+					</div>
+					
+					<div id="PfileBot">
+						<div id="PtruthBot" class="normal">
+						<img src="images/folderTrail.png" />
+						</div>
+						
+					</div>
+				</div>
+			
+			<!-- contents --> 
+				<div id="Pcontents">
+				
+					<div id="sideBar" class="normal">
+						<div id="tree">
+							<!--<img src="images/folderSideTree.png" />-->
+							<a class="mainTree" href="#">Places<span>x</span></a>
+							<br style="clear: both" />
+							<a href="#"><span class="placesIcon"><img src="images/MenuHome.png" /></span>Guest</a>
+							<a href="#"><span class="placesIcon"><img src="images/MenuDesktop.png" /></span>Desktop</a>
+							<a href="#"><span class="placesIcon"><img src="images/MenuFloppy.png" /></span>File System</a>
+							<a href="#"><span class="placesIcon"><img src="images/MenuFloppy.png" /></span>Trash</a>
+							<div style="height: 1px; border-bottom: 1px solid #999;"></div>
+							<a href="pages/documents.html" target="PfolderSrc"><span class="placesIcon"><img src="images/Menufolder.png" /></span>Documents</a>
+							<a href="pages/pictures.html" target="PfolderSrc" class="current"><span class="placesIcon"><img src="images/Menufolder.png" /></span>Pictures</a>
+							<a href="pages/music.html" target="PfolderSrc"><span class="placesIcon"><img src="images/Menufolder.png" /></span>Music</a>
+							<a href="#"><span class="placesIcon"><img src="images/Menufolder.png" /></span>Videos</a>
+							<a href="#"><span class="placesIcon"><img src="images/Menufolder.png" /></span>Projects</a>						
+						</div>
+					</div>
+					
+					<div id="PmainContent">
+						<div id="Pframe" class="normal">
+							<iframe src="pages/pictures.html" name="PfolderSrc" width="100%" height="370" frameborder="0" id="Piframe"></iframe>
+						</div>
+					</div>
+					
+				</div> <!-- end contents -->
+				
+			</div> <!-- end reality -->
+			<div id="PrightEdge" class="normal">&nbsp;</div>
+			
+		</div><!-- end folderinside -->
+		
+		<div id="Pfooter">
+			<div class="left"></div>
+			<div id="Pfoot">Pictures -  We will fix this soon</div>
+			<div class="right"></div>
+		</div>
+		
+		
+		
+	</div><!-- end folder-root -->
+
+
+	<div id="draggable3" class="window ui-corner-all">
+		<h3 class="topBar ui-corner-tl ui-corner-tr">
+			<span class="topBarIcon"><img src="images/folderIcon.png" class="icon" /></span>
+			<span class="title">/ - My Pictures</span>
+			<div class="foreground">/ - My Pictures</div>
+			<span class="controls">
+				<a href="#"  onClick="minimizeClose('Pfolder')" class="min">&nbsp;</a>
+				<a href="#" class="max" onClick="Maximize('Pfolder');">&nbsp;</a>
+				<a href="#" class="close" onClick="fullClose('Pfolder');">&nbsp;</a>
+			</span>
+		</h3>
+		this is draggable
+	</div>
+	
+	
+	
+	</div><!-- end containWrap -->
+</div><!-- end ubuntu -->
+
+<!-- footer ///////////////////////////// -->
+<div id="footerBarContainer">
+	<div id="footerBar">
+		<div id="panelMisc">
+			<span id="colons"><p>::</p><p>::</p><p>::</p></span>
+			<span id="windows">
+				<a href="#" id="desktop" onClick="hideAll();" ><img src="images/panelDesktop.png" /></a>
+				<!-- pictures -->
+				<a href="#" id="PanelPfolder" onMouseOver="folderHover('PanelPfolder');" onMouseOut="folderUnHover('PanelPfolder');" onclick="returnOpen('Pfolder');"  class="initial">
+					<span class="panelImg"><img src="images/panelPictures.png" /></span><span class="panName">My Pictures</span></a>
+				
+			</span>
+			
+		</div>
+		<button class="bg">change</button>
+	</div>
+</div>
+<!-- end footer -->
+
+
+
+<!-- scripts //////////////////////////// -->
+
+<script type="text/javascript">
+var theHandle = document.getElementById("Phandle");
+var theRoot = document.getElementById("Pfolder");
+Drag.init(theHandle, theRoot);
+
+var Ubu = $('#ubuntu').height();
+$("#draggable3").draggable({ containment: '#containWrap', scroll: false }).resizable({
+			//maxHeight: Ubu,
+			minHeight: 200,
+			minWidth: 300
+		});
+
+
+</script>
+
+
+<!-- jquery!!!!! --->
+<script type="text/javascript">
+$('document').ready(function(){
+	//alert("help");
+	
+});
+$('button.bg').click(function(){
+	$('body').addClass("ubu1");
+});
+</script>
+
+</body>
+</html>
+
+

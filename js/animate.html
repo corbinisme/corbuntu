@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr">
+    
+    <head>
+        <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.4/dijit/themes/tundra/tundra.css">
+        <style type="text/css">
+            body, html { font-family:helvetica,arial,sans-serif; font-size:90%; }
+        </style>
+    </head>
+    
+    <body class="tundra ">
+      
+    
+<button dojoType="dijit.form.Button" onClick="doAnimation(1);">Black To White</button>
+<button dojoType="dijit.form.Button" onClick="doAnimation(2);">White To Black</button>
+<button dojoType="dijit.form.Button" onClick="doAnimation(3);">Text Embiggen</button>
+<button dojoType="dijit.form.Button" onClick="doAnimation(4);">Text UnEmbiggen</button>
+<button dojoType="dijit.form.Button" onClick="doAnimation(5);">Widen</button>
+<button dojoType="dijit.form.Button" onClick="doAnimation(6);">Narrow</button>
+<br/>
+<button dojoType="dijit.form.Button" onClick="pauseAnimation();">Pause</button>
+<button dojoType="dijit.form.Button" onClick="resumeAnimation();">Resume</button>
+
+<div id="animDiv" class="box">
+  <p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+  semper sagittis velit. Cras in mi. Duis porta mauris ut ligula.
+  Proin porta rutrum lacus. Etiam consequat scelerisque quam. Nulla
+  facilisi.  Maecenas luctus venenatis nulla. In sit amet dui non mi
+  semper iaculis.  Sed molestie tortor at ipsum. Morbi dictum rutrum
+  magna. Sed vitae risus.
+  </p>
+</div>
+
+</body>
+
+
+
+
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.4/dojo/dojo.xd.js"
+    djConfig="parseOnLoad: true">
+    </script>
+
+
+
+
+<script type="text/javascript">
+  //Note that you do not have to dojo.require anything
+  //in order to use the fade functions, as they are included
+  //in the base.
+  var blackToWhite = dojo.animateProperty(
+    {
+      node: "animDiv",duration: 1000,
+      properties: {
+        color:         { start: "black", end: "white" },
+        backgroundColor:   { start: "white", end: "black" }
+      }
+    });
+  var whiteToBlack = dojo.animateProperty(
+    {
+      node: "animDiv",duration: 1000,
+      properties: {
+        color:         { start: "white", end: "black" },
+        backgroundColor:   { start: "black", end: "white" }
+      }
+    });
+  var textBigger = dojo.animateProperty(
+    {
+      node: "animDiv",duration: 1000,
+      properties: {
+        fontSize: {end: 25, unit: "px"}
+      }
+    });
+
+  var textSmaller = dojo.animateProperty(
+    {
+      node: "animDiv",duration: 1000,
+      properties: {
+        fontSize: {end: 10, unit: "px"}
+      }
+    });
+      
+  var makeWider = dojo.animateProperty(
+    {
+      node: "animDiv",duration: 1000,
+      properties: {
+        width: {end: 450}
+      }
+    });
+
+  var makeNarrower = dojo.animateProperty(
+    {
+      node: "animDiv",duration: 1000,
+      properties: {
+        width: {end: 200}
+      }
+    });
+
+  var currentAnimation;
+
+  function doAnimation(index) {
+    switch(index) {
+      case 1:
+        currentAnimation = blackToWhite;
+        break;
+      case 2:
+        currentAnimation = whiteToBlack;
+        break;
+      case 3:
+        currentAnimation = textBigger;
+        break;
+      case 4:
+        currentAnimation = textSmaller;
+        break;
+      case 5:
+        currentAnimation = makeWider;
+        break;
+      case 6:
+        currentAnimation = makeNarrower;
+        break;
+    }
+    //Play the animation. Without this call, it will not run.
+    currentAnimation.play();
+  }
+
+  function pauseAnimation(){
+    if(currentAnimation && currentAnimation.status() == "playing"){
+      currentAnimation.pause();
+    }
+  }
+  function resumeAnimation(){
+    if(currentAnimation && currentAnimation.status() == "paused"){
+      currentAnimation.play();
+    }
+  }
+</script>
+<style type="text/css">
+  .box {
+    margin-top: 10px;
+    color: #292929;
+    width: 300px;
+    border: 1px solid #BABABA;
+    background-color: #ddd;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 1em;
+    -o-border-radius: 10px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow: 0px 3px 7px #adadad;
+    border-radius: 10px;
+    -moz-box-sizing: border-box;
+    -opera-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+</style>
+
+
+
+
+
+ <script>
+        dojo.require("dijit.form.Button");
+        function basicFadeinSetup() {
+            //Style the dom node to opacity 0;
+            dojo.style("basicFadeNode", "opacity", "0");
+
+            //Function linked to the button to trigger the fade.
+            function fadeIt() {
+                dojo.style("basicFadeNode", "opacity", "0");
+                var fadeArgs = {
+                    node: "basicFadeNode"
+                };
+                dojo.fadeIn(fadeArgs).play();
+            }
+            dojo.connect(dijit.byId("basicFadeButton"), "onClick", fadeIt);
+        }
+        dojo.addOnLoad(basicFadeinSetup);
+    </script>
+    <!-- NOTE: the following script tag is not intended for usage in real
+    world!! it is part of the CodeGlass and you should just remove it when
+    you use the code -->
+    <script type="text/javascript">
+        dojo.addOnLoad(function() {
+            if (window.pub) {
+                window.pub();
+            }
+        });
+    </script>
+   
+
+</html>

@@ -1,0 +1,637 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+.theme #square li.squares{
+	background-image:url(../../backgrounds/simple-ubuntu.jpg);
+}
+/*background-image:url(../../backgrounds/Ubuntu_Brown_Leather_Distress.jpg);*/
+
+
+
+
+/* panel */
+.theme .panelContainer {
+	/*background-image:url(../../images/opacity.png);*/
+}
+.theme .panel {
+	background-color: #efebe7;
+	opacity: 1;
+}
+.theme .panel .rightTasks{
+	background-color: #EFEBE7;
+}
+
+.theme .quickLaunch a {border-radius: 4px 4px 0px 0px; border: 1px solid #CC9; height:30px; display:block; margin: 1px;  margin-bottom:0px; padding: 0px 2px; width:32px}
+.theme .panel .rightTasks .power a {
+	background-image:url(../../images/powerSm.png);
+	display:block;
+	background-repeat:no-repeat;
+	width: 21px; height: 21px;
+	margin-top: 5px;
+	margin-right: 5px;	
+	text-decoration: none;
+	background-position: -3px -1px; 
+	border: 1px solid #000;
+}
+.theme .panel .rightTasks .volume a.volIcon {
+	display: block;
+	width: 29px;
+	height: 25px; 
+	margin: 2px 6px 2px 0px;
+	background-image:url(../../images/iconSetBig.png);	
+	text-decoration: none;
+	background-position:30px -2px;
+	margin-top: 2px;
+	border: 1px solid #EFEBE7;
+}
+.theme .panel .rightTasks .volume a.volIcon:hover {border:1px solid #996600;}
+
+.theme .panel .rightTasks .volume a.muted {background-position: 0px -33px;}
+
+.theme .panel .rightTasks .volumeDiv {position:relative;}
+.theme .panel .rightTasks .volumeDiv .volumeSlider {position:absolute;}
+
+.theme .panel .rightTasks  .volClose {margin-left: -18px; font-size: 0.7em;}
+.theme .panel .rightTasks .slider-vertical{height:200px; margin-top: 14px; margin-bottom: 10px;}
+.volumeBar {position:absolute; top: 33px; left: -14px; width: 31px; 
+                     padding:6px 6px 6px 20px; background:#eee; border: 1px solid #222;
+                     height: 278px; z-index: 99999
+}
+.volLevel {background: #444; width: 57px; height:30px; margin-left: -20px; margin-top: -6px;}
+.volLeveAmt {border:0; color:#f6931f; font-weight:bold; 
+position: absolute; top: 0px; left: 0px; background-color:transparent; 
+width: 57px; text-align:center; margin-top: 7px;
+}
+
+
+/* ///////////////////// footer panel styles /////////////////////////// */
+.theme .footerBarContainer { background-image:url("../../images/opacity.png");}
+.theme .footerBar {background-color: #eee;}
+.theme .footerBar .panelTray a  {
+	margin-left: 10px;
+	background-repeat: no-repeat;
+	text-indent: 10px;
+	color: #333;
+	font-size: 0.8em;
+	font-weight: normal;
+	text-decoration: none;
+	background-image:url(../../images/folder2.png);
+}
+.theme .footerBar .panelTray a.active {
+	background-image:url(../../images/folder1.png);
+}
+.theme .footerBar .panelTray a.current {background-image:url(../../images/panelOver.jpg);}
+
+.theme .footerBar .panelTray button {margin-top: 2px; margin-right: 5px; background-image:url(../../images/folderTrailBg2.png); background-position: 0px -29px; border-color: #ccc; color:#1C94C4; }
+.theme .footerBar .panelTray button.ui-button {border-radius:6px 6px 0px 0px}
+.theme .footerBar .panelTray button.active {background-position: 0px -58px; color: #336688; border-color: #999;}
+.theme .footerBar .panelTray button:hover {background-position: 0px 0px;  border-color: #aaa;}
+.theme .footerBar .panelTray button.active:hover {background-position: 0px -87px;  border-color: #aaa;}
+.theme .desktops {background:#333; width: 70px; padding-left: 4px; height:32px;}
+.theme .footerBar .panelTray button span.ui-button-text {
+	text-align: left;
+	max-width: 140px;
+	white-space:nowrap;
+	display:block;
+	overflow:hidden;
+}
+.theme .desktops a {
+	border: 1px solid #930;
+	background-color:#963;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	display: block; 
+	width:28px; 
+	height: 23px; 
+	margin: 2px 2px 0px 2px;
+	text-align:center;
+	line-height:23px;
+	color: #fff;
+	text-decoration:none	
+}
+.theme .desktops a.currentScreen {
+	background-color:#960	
+}
+
+.theme .panel .rightTasks span.dateZone {cursor:pointer; border: 1px solid #eee; border-bottom:0px; height: 30px; line-height:32px; padding: 0px 4px; margin-top: 2px; }
+.theme .panel .rightTasks span.dateZone.hoverDate {border: 1px solid #999; border-bottom:0px; background-image:url(../../images/folderTrailBG2.png); background-position: 0px -29px}
+
+.theme .panel .rightTasks span.dateZone.ActiveDate {border: 1px solid #999; border-bottom:0px; background-image:url(../../images/folderTrailBG2.png); background-position: 0px -58px}
+.theme .panel .rightTasks  .ui-datepicker td span, .theme .panel .rightTasks .ui-datepicker td a {float: none; text-align:center}
+.theme .ui-datepicker-header.ui-widget-header {background-image: none; background-color: #444}
+
+/* ////////////// folder /////////////////// */
+.theme .window {width: 690px; height: 475px; background-color: #eee; border: 1px solid #222; }
+.theme .window.system {width: 490px; height: auto}
+.theme .window.firefoxBrowser {width: 950px;}
+.theme .window.documentViewer {width: 600px; height: auto}
+.theme .window.youtubeViewer {width: 425px; height: auto; background-image:url(../../images/spinner.gif); background-position:center center; background-repeat:no-repeat}
+.theme .window.game.menuPong {width: 450px; height:395px;}
+.theme .window.game.menuTower {width: 720px; height:565px;}
+
+
+.theme .window h3.topBar {background-image:url("../../images/folderTop.png"); background-position:bottom; color: #fff;font-size: 16px;}
+.theme .window.activeWindow h3.topBar {background-position:top}
+.theme .window h3.topBar span.title {text-shadow: 0.1em 0.1em 0.2em black}
+/*
+.theme .window h3.topBar.ui-corner-tl  {
+	-moz-border-radius-topleft: 8px; -webkit-border-top-left-radius: 8px; border-top-left-radius:8px;	 
+}
+.theme .window h3.topBar.ui-corner-tr {
+	-moz-border-radius-topright: 8px; -webkit-border-top-right-radius: 8px; border-top-rght-radius:8px;	
+}
+*/
+.theme .window .controls a {
+	background-image:url(../../images/themeControlBtnInactive.png); 
+	width: 27px; 	
+	height: 20px;
+	padding-top: 0px;
+	margin-top:3px;
+	background-repeat:no-repeat;
+	margin-right: 1px;
+}
+.theme .window.activeWindow .controls a {background-image:url(../../images/themeControlBtn.png)}
+.theme .window .controls a.min {
+	background-position:-29px -46px;
+	}
+.theme .window .controls a.min:hover {
+	background-position:-29px -23px;
+}
+.theme .window .controls a.minActive {
+	background-position:-29px 0px;
+}
+.theme .window .controls a.max, .theme .window .controls a.restore{
+	background-position:1px -46px;
+}
+.theme .window .controls a.max:hover, .window .controls a.restore:hover{
+	background-position:1px -23px;
+}
+.theme .window .controls a.maxActive, .window .controls a.restoreActive{
+	background-position:1px 0px;
+}
+.theme .window .controls a.close{
+	background-position: -58px -46px;
+}
+.theme .window .controls a.close:hover{
+	background-position:-58px -23px;
+}
+.theme .window .controls a.closeActive{
+	background-position:-58px 0px;
+}
+
+
+.theme .window .folderMenu {
+	background-image:url(../../images/folderFileTop.png);
+	background-repeat: repeat-x;
+	font-size: 0.9em;
+	font-weight:normal;
+}
+
+.theme .window .folderMenu ul.children {
+	background:#fff;
+	border-color: #333;
+	border-style:solid;
+	border-width: 0px 1px 1px 1px;
+}
+.theme .window .folderMenu ul.children li.dividerLine {
+	border-bottom: 1px solid #aaa;
+	height: 0px;
+}
+
+.theme .window ul.children li a {
+	color:#333;
+	background-color: #fff;
+	padding: 4px;
+	font-size:12px; color: #333
+}
+.theme .window ul.children li a:hover {
+	background-color: #eee;
+	color: #000;
+
+}
+
+.theme .window ul.children li a span.folderMenuNew {}
+.theme .window ul.children li a span.folderMenuCreate {}
+.theme .window ul.children li a span.folderMenuProp {}
+.theme .window ul.children li a span.folderMenuCloseAll {}
+.theme .window ul.children li a span.folderMenuClose {}
+.theme .window ul.children li a span.folderMenuNew {}
+.theme .window ul.children li a span.folderMenuNew {}
+.theme .window ul.children li a span.folderMenuNew {}
+.theme .window ul.children li a span.folderMenuNew {}
+.theme .window ul.children li a span.folderMenuNew {}
+
+
+.theme .window .folderIcons {
+	background-image:url(../../images/folderFileMid.png);
+	background-repeat: repeat-x;
+	background-position:bottom;
+}
+
+.theme .window .folderTrail li a {
+	color: #333; text-decoration:none;	
+	background-repeat:repeat-x;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid #777;
+	font-size:0.7em; 
+	text-align:center;
+	line-height:29px;
+	background-image:url(../../images/folderTrailBg.png);
+	background-position:0px -30px;
+	
+}
+.theme .window .folderTrail li a.selected {
+	background-position: 0px -64px;	
+}
+.theme .window .folderTrail li a:hover {
+	background-position: 0px 0px;
+}
+
+.theme .window .folderTrailActions {
+	float: right; width: 200px; 
+	line-height:38px; font-size:9px; padding-right:0px;	
+}
+.theme .window .thumbSlide {float: right; width: 100px; margin-top:16px; margin-right:8px;}
+.theme .window .folderArea {	
+	border-style:solid;
+	border-color: #ccc;
+	border-width: 1px 1px 1px 0px;	
+	background-color: #fff;
+	height: 300px;
+	background-image:url(../../images/greatDivide.PNG);
+	background-repeat: repeat-y;
+	background-position: 120px 0px;
+}
+.theme .window .folderArea .singleRow {
+	display: block;
+	float: left;
+	width: 99%!important;	
+	text-align: left;
+	padding: 2px;
+}
+.theme .window .folderArea .singleRow img {float: left; padding: 10px;}
+.theme .window .folderArea .singleRow  span {text-indent:15px; padding-top: 2%;}
+
+
+.theme .window ul.jp-toggles {display: none}
+.theme .window .VLCarea {	
+	border-style:solid;
+	border-color: #ccc;
+	border-width: 1px 1px 1px 0px;	
+	background-color: #fff;
+	height: 346px;
+	/*background-image:url(../../images/greatDivideVLC.png);*/
+	background-repeat: repeat-y;
+	background-position: top right;
+	background-color:#000;
+	width:480px; float:left;
+	overflow:hidden;
+}
+.theme .window .VLCarea ul.vlcMediaBars {list-style-type:none; margin:0; padding:0; clear:both;}
+.theme .window .VLCarea ul.vlcMediaBars li {float: left; width: 10%; height: 346px; background:#000;}
+.theme .window .VLCarea ul.vlcMediaBars li span {display:block; margin: 0px 2px; height:20px; background: #333;}
+
+
+.theme .window .VLCarea ul.vlcMediaRow {list-style-type:none; margin:0; padding:0; clear:both;}
+.theme .window .VLCarea ul.vlcMediaRow li {float: left; width: 10%; display:block; text-align:center; height:100%; vertical-align:middle}
+.theme .window .VLCarea ul.vlcMediaRow li span {background:#222; display:block; margin: 2px 13%;}
+.theme .window .control {clear:both;}
+
+.theme .window .visualizer {float:left; background:#000; margin-right: 1px;}
+.theme .window .playlist h4 {margin: 0; padding: 10px; background:#aaa; border-bottom:1px solid #333} 
+.theme .window .playlist ul {list-style-type:none; margin:0px; padding:0px}
+.theme .window .playlist li a {
+/*
+display: block; height:15px; line-height:15px; padding: 4px; background:#fff; border-bottom:1px solid #ccc; font-size:12px; color: #333; text-decoration:none;
+*/
+}
+
+.theme .window .VLCbackground {background-image:url(../../images/greatDivideVLC.png); background-repeat:repeat-y; background-position:right; background-color:#000; }
+.theme .window .places {}
+.theme .window .placeTitle {border: 1px solid #999; background-color: #ddd}
+
+
+.theme .window .topBarIcon.images, .theme .window .topBarIcon.Pictures {
+	background-image:url(../../images/folderIcon.png);
+}
+.theme .window .topBarIcon.Documents {
+	background-image:url(../../images/folderIcon.png);
+}
+.theme .window .topBarIcon.office {
+	background-image:url(../../images/folderIcon.png);
+	background-position:-19px 0px;
+	width: 19px;
+}
+
+.theme .window .topBarIcon.Firefox {
+	background-image:url(../../images/folderIcon.png);
+	background-position:-38px 0px;
+	width: 21px;
+	height: 19px
+}
+.theme .window .topBarIcon.system {
+	background-image:url(../../images/folderIcon.png);
+}
+
+
+
+.theme .window .pictureFolder a {display: block; float: left; width: 168px; height: 145px; margin-right: 2px;
+text-align: center; padding-top: 10px; color: #333; font-face: arial; font-size: 0.85em; text-decoration: none;}
+.theme .window .pictureFolder a img {border-style: none}
+.theme .window .pictureFolder a span {display:block}
+.theme .window .pictureFolder a:hover span {text-decoration: underline;}
+
+.theme .window .documentFolderIcons a {display: block; float: left; width: 168px; height: 145px; margin-right: 2px;
+text-align: center; padding-top: 10px; color: #333; font-face: arial; font-size: 0.85em; text-decoration: none;}
+.theme .window .documentFolderIcons a img {border-style: none}
+.theme .window .documentFolderIcons a span {display:block}
+.theme .window .documentFolderIcons a:hover span {text-decoration: underline;}
+
+
+.theme .window .pictureControls .ui-icon {
+	background-image:url(../../images/iconSetBig.png);
+	width: 23px;
+	height:23px; 
+	background-position: -603px -126px;
+}
+.theme .window  .pictureControls .ui-icon-seek-next {
+	background-position:-366px -126px;	
+}
+.theme .window .pictureControls .ui-icon-seek-prev {
+	background-position:-274px -126px;	
+}
+
+.theme .window .pictureControls .ui-button-text-icon-primary {
+	padding-left: 0.5em;	
+}
+
+.theme .window .pictureControls .ui-button-text-icon-primary .ui-button-text {padding-left: 2.6em}
+.theme .window .pictureControls .ui-button-text-icon-secondary {
+	padding-right: 0.5em;	
+}
+
+
+
+.theme .window .folderIcons li div {display: block;  height:54px; width: 74px; }
+.theme .window .folderIcons li div a {
+	font-size: 0.8em; 
+	color: #222;
+	text-decoration:none; 
+	display: block; 
+	width: 70px; 
+	height:50px; 
+	margin: 2px; 
+	border:1px solid transparent;
+	text-align:center
+}
+
+.theme .window .folderIcons li div a:hover {
+	border:1px solid #777;
+	background:#eee;
+}
+.theme .window .folderIcons li div a:active {background: #ddd; border-color: #000;}
+.theme .window .folderIcons li.disabled div  a {color: #999;}
+.theme .window .folderIcons li.disabled div  a:hover {border-color: transparent;}
+.theme .window .folderIcons li div a span {
+background-image:url(../../images/iconSetBig.png);
+display: block; 
+width: 26px;
+height:26px;
+margin: auto;
+}
+
+.theme .window .firefoxIcons{background-image:url(../../images/fileMidFirefoxRepeat.PNG); height: 39px;}
+.theme .window .firefoxIcons li {height: 35px; width: 45px; }
+.theme .window .firefoxIcons li div {height: 38px;}
+.theme .window .firefoxIcons li div a {height: 32px; width: 40px}
+.theme .window .firefoxIcons li div a span {height: 26px}
+
+.theme .window .folderIcons li.back div a span {background-position: -423px -119px;}
+.theme .window .folderIcons li.forward div a span {background-position: -392px -119px;}
+.theme .window .folderIcons li.stop div a span {background-position: -571px -210px;}
+.theme .window .folderIcons li.reload div a span {background-position: -332px -119px;}
+.theme .window .folderIcons li.parent div a span {background-position: -482px -119px;}
+
+.theme .window .folderIcons li.separator {background-image:url(../../images/AdminSeparator.png); width: 2px; background-position:top center;}
+.theme .window .folderIcons li.home div a span {background-position: -451px -90px;}
+.theme .window .folderIcons li.computer div a span {background-position: -211px -29px;}
+.theme .window .folderIcons li.search div a span {background-position: -150px -61px;}
+.theme .window .folderIcons li.help div a span {background-position: -512px -119px;}
+
+.theme .window .firefoxBookmarks  {background-image:url(../../images/fileMidFirefoxRepeat.PNG); height: 39px; background-position:bottom}
+.theme .window .firefoxTabs {background: #fff;  margin: 0px 2px 2px 2px;}
+.theme .window .firefoxTabs .tabs {background-image:url(../../images/fileMidFirefoxRepeat.PNG); height: 33px; background-position: 0px -6px}
+.theme .window .firefoxTabs .tabContent{ border: 1px solid #999; border-top: 0px}
+
+.theme UL.jqueryFileTree {
+	font-family: Verdana, sans-serif;
+	font-size: 13px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.theme UL.jqueryFileTree ul {margin-left: 15px;}
+
+.theme UL.jqueryFileTree LI {
+	list-style: none;
+	padding: 0px 0px 0px 0px;
+	margin: 0px;
+	margin-left: -1px;
+	white-space: nowrap;
+	line-height:26px;
+}
+
+.theme UL.jqueryFileTree A {
+	color: #333;
+	text-decoration: none;
+	display: block;
+	padding: 0px;
+}
+
+.theme UL.jqueryFileTree A:hover {
+	background: #BDF;
+}
+
+.theme UL.jqueryFileTree LI a span {
+	background-image:url(../../images/iconSetBig.png);
+	background-repeat:no-repeat;
+	display:block;
+	height: 26px;
+	width: 26px;	
+	float: left;
+}
+
+
+
+.theme .activeWindow UL.jqueryFileTree LI a.selected { background-color: #FC6; text-indent:4px;}
+.theme .activeWindow UL.jqueryFileTree LI a.selected:hover {
+	background-color: #FC6
+}
+
+.theme .activeWindow UL.jqueryFileTree .subLevelFileTree LI a.selected {background-color: #BDF}
+
+.theme UL.jqueryFileTree LI a span { background-position: -393px -91px }
+.theme UL.jqueryFileTree LI a.selected span { background-position:-361px -90px}
+
+.theme .subLevelFile, .theme .subsubLevelFile {display:none}
+.theme .expanded .subLevelFile {display:block} 
+.theme .expanded .subexpand .subsubLevelFile{display:block}
+
+.theme .activeWindow UL.jqueryFileTree .expanded .subLevelFile li a.selected {background-color: #BDF}
+
+/* dialog */
+.theme .ui-dialog {
+	padding: 0px;
+	border: 1px solid #222
+}
+.theme .ui-widget-header {
+	background-image:url(../../images/folderTop.png);
+	border-width: 0px;
+	padding: 0px;
+	background-position: 0px -1px;
+	height: 25px;
+	line-height:23px;
+	text-indent: 13px;
+	-moz-border-radius-bottomleft: 0px;
+	-moz-border-radius-bottomright: 0px;
+}	
+.theme .ui-widget-content {
+	clear:both;
+}
+.theme .ui-widget-header .ui-icon-closethick {
+	background-image:url(../../images/themeControlBtn.png);
+	background-position: -58px -46px;
+}
+
+.theme .ui-dialog .ui-dialog-titlebar {
+	padding: 0px;
+	-moz-border-radius:0px;
+	height: 25px;
+}
+
+.theme .ui-dialog-title {
+	text-shadow: 0.1em 0.1em 0.2em black
+}
+.theme .ui-dialog .ui-dialog-titlebar-close {width: 27px; margin-top:-13px; margin-right:1px;}
+.theme .ui-dialog .ui-dialog-titlebar .ui-icon {height:20px; width: 27px;}
+.theme .ui-dialog .ui-state-hover .ui-icon, .theme .ui-dialog .ui-state-focus .ui-icon {background-image:url(../../images/themeControlBtn.png); background-position:-58px -23px; -moz-border-radius:0px; }
+.theme .ui-dialog .ui-dialog-titlebar .ui-state-hover,
+.theme .ui-dialog .ui-dialog-titlebar .ui-widget-content .ui-state-hover, 
+.theme .ui-dialog .ui-dialog-titlebar .ui-widget-header .ui-state-hover, 
+.theme .ui-dialog .ui-dialog-titlebar .ui-state-focus, 
+.theme .ui-dialog .ui-dialog-titlebar .ui-widget-content .ui-state-focus, 
+.theme .ui-dialog .ui-dialog-titlebar .ui-widget-header .ui-state-focus { border: 1px solid transparent; background: transparent; -moz-border-radius:0px; }
+
+.theme .system .ajaxDiv .ui-resizable-handle {display:none}
+.theme .systemButtonRow {height: 40px; padding: 0px 10px;}
+.theme .systemButtonRow  div {height: 50px; margin-top: 5px; }
+.theme .system .mainContent {margin: 10px; padding: 5px; border: 1px solid #ccc; -moz-border-radius:4px; min-height:200px}
+
+
+.theme .documentFolderIcons a span.fldr {
+	display: block;
+	margin: 15px 20px 0px 20px; 
+	/*background-image:url(../../images/AGF%20PNG/AGF_Sunset.png);*/
+	height:80px;
+	
+}
+.theme .documentFolderIcons a span.titleText {
+	color:#000; 
+	font-weight:bold;
+	line-height:15px;
+}
+.theme .documentContainer {
+	margin: 5px;
+	 overflow:hidden;
+	 border: 1px solid #333; background-color:#fff;
+}
+.theme .contentTitle {
+
+	border: 0px solid #333;
+	border-bottom:0px;
+	background-color: #ddd; text-align:left;
+	text-indent: 15px; font-size: 25px; 
+	color: #222;
+	line-height:45px;
+	height: 45px;
+}
+.theme .documentContent {
+	padding: 0px; line-height:15px; font-size: 12px; 
+}
+.theme .documentContainer .ui-resizable-handle {display:none}
+.theme .documentContainer .entry-content p {margin- top: 5px; margin-bottom: 5px;}
+
+.theme .slider-vertical .ui-widget-header {
+	background-image:none;
+}
+.theme .ajaxDiv {padding-top: 5px;}
+.theme a.itemSelect {
+border: 1px solid #336688!important;
+	background-color: #fff;
+}
+.theme a.itemActive { background-color:orange;}
+
+.theme .documentContainer .ui-resizable-handle {
+	display: none!important;
+}
+
+.theme .firefoxTabs .ui-widget-header {background-image: url("../../images/fileMidFirefoxRepeat.PNG"); background-color: #eee;}
+.theme .firefoxTabs .ui-tabs {padding: 0px;}
+.theme .firefoxTabs .ui-tabs .ui-tabs-nav {padding: 0px}
+.theme .firefoxTabs .ui-tabs .ui-tabs-nav li a {padding: 0.1em 0.4em}
+
+.theme .firefoxTabs li {background-image:url("../../images/folderTrailBg.png"); background-position:0 -30px; border: 1px solid #999; margin-top: 3px;}
+.theme .firefoxTabs li a {padding: 0px 5px; text-decoration:none; color: #333; font-weight:bold; font-size:12px; line-height:12px; cursor:default}
+.theme .firefoxTabs li span {margin: 6px 4px 0px 0px; cursor:pointer}
+.theme .firefoxTabs button {border: 1px solid #999; padding: 0px 5px; margin: 3px 2px 0px 2px; height: 30px; cursor:pointer; }
+.theme .firefoxTabs .addTab {background-position: -16px -128px; margin-top: -2px;}
+.theme .firefoxTabContent {border: 1px solid #999; border-top: 0px; margin: 0px 1px 3px 1px}
+.theme .firefoxTabContent .ui-resizable-handle {visibility:hidden}
+
+.theme .ui-icon-browser {background-position: -240px -130px}
+
+.theme .ffIcons {width: 265px; position:absolute; top: 0px; left:0px;}
+.theme .ffIcons ul {float:left}
+.theme .URI {border: 0px solid #ccc; border-left: 0px solid #000; border-right: 0px solid #000; height: 24px;margin: 0px 229px 0px 265px; width: 305px}
+.theme .URI input {height: 22px; line-height:22px; border-style: none; margin-top: 5px; width: 100%; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;}
+
+.theme .ffsiteIcon {float: right; width: 28px; height: 24px; margin-top:5px;}
+.theme .ffsiteIcon  span {display:block; height: 22px;  background-image:url(../../images/firefoxButtons.png); background-position:0px -22px; border: 1px solid #aaa; width: 26px}
+.theme .GO {float:left}
+.theme .GO a {height: 22px; width: 26px; background-image:url(../../images/firefoxButtons.png); display:block; text-decoration:none; border: 1px solid #aaa; margin-top: 5px;}
+.theme .GO a:hover {background-position:0px -44px}
+.theme .gooSearch {position:absolute; top: 0px; right:5px}
+.theme .google { border: 0px solid #ccc; height: 24px; margin-top:5px; margin-left: 10px;}
+.theme .google div {float: left;}
+.theme .google div input {height: 22px; line-height:22px; border-style: none; margin-top: 0px; width: 125px; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;} 
+.theme .google div.searchProvider a {display:block; height:22px; width: 30px; background-image:url(../../images/firefoxButtons.png); background-position:-24px 0px; border: 1px solid #aaa; text-decoration:none;}
+.theme .google div.searchProvider a:hover {background-position:-24px -44px;}
+.theme .google div.searchButton a {display:block; height:22px; width: 26px; background-image:url(../../images/firefoxButtons.png); background-position:-27px -22px; border: 1px solid #aaa; text-decoration:none; }
+.theme .google div.searchButton a:hover {background-position: -27px -66px}
+
+
+.theme .ui-state-default .ui-icon {background-image:url(../../images/folderIcon.png); background-position:-40px -41px}
+.theme .ui-state-default .ui-icon-image {background-position:-79px -41px}
+.theme .ui-state-default .ui-icon-document {background-position: -61px -20px}
+.theme .ui-state-default .ui-icon-music {background-position:-61px -42px}
+.theme .ui-state-default .ui-icon-VLC {background-position:0px -20px}
+.theme .ui-state-default .ui-icon-note {background-position:-60px -61px}
+.theme .ui-state-default .ui-icon-video {background-position:-98px -61px}
+.theme .ui-state-default .ui-icon-browser {background-position:-39px 0px}
+.theme .ui-state-default .ui-icon-game {background-position:-158px -40px}
+
+
+.theme .firefoxFrame {display:none}
+.theme .firefoxFrame.showing {display:block}
+.theme .tabs li.showingTab a {
+	color: #336688;
+}
+
+.theme .firefoxBookmarks a {display:block; float:left; padding: 0px 10px; border: 1px solid transparent; margin: 3px 4px 0px 4px; font-size:12px; text-decoration:none; color: #333;}
+.theme .firefoxBookmarks a:hover {border: 1px solid #999; color: #000;}

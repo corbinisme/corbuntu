@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#pongTable {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 400px;
+	height: 300px;
+	border: 4px solid #CCC;
+	background-color: #F3F3F3;
+	z-index: 1;
+}
+#playerOne {
+	position: absolute;
+	top: 196px;
+	left: 45px;
+	width: 10px;
+	height: 35px;
+	background-color: #777;
+	z-index: 2;
+}
+#playerTwo {
+	position: absolute;
+	top: 196px;
+	left: 390px;
+	width: 10px;
+	height: 35px;
+	background-color: #777;
+	z-index: 2;
+}
+#ball {
+	position: absolute;
+	top: 160px;
+	left: 210px;
+	width: 7px;
+	height: 7px;
+	clip: rect(0px 7px 7px 0px);
+	background-color: #555;
+	z-index: 2;
+	display: none;
+}
+#click {
+	position: absolute;
+	top: 160px;
+	left: 27px;
+	width: 400px;
+	text-align: center;
+	font-family: Tahoma;
+	font-size: 10px;
+	z-index: 3;
+}
+#scores {
+	position: absolute;
+	top: 330px;
+	left: 24px;
+	width: 400px;
+	font-family: Tahoma;
+	font-size: 11px;
+	z-index: 3;	
+}
+
+
+/* //// tower /// */
+.logic table {font:bold 13px Verdana}
+.logic p {font:normal 11px Tahoma,Verdana}
+.logic input,select {font:normal 12px Tahoma,Verdana}
+.logic select {width:40px}
+.logic a {font-weight:bold}
+.logic .tower {position:absolute;visibility:visible;left:77px;top:184px;font:bold 10px Tahoma}
+.logic.container {position:absolute;visibility:visible;}
+.logic .towervert {position:absolute;visibility:visible;border:1px solid black;background-color:black}
+.logic .towerhoriz {position:absolute;visibility:visible;border:1px solid black;font-size:1px;background-color:black}
+.logic .disk {position:absolute;visibility:visible;border:1px solid black}

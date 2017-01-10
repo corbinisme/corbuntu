@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr">
+<body>
+ <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.4/dijit/themes/tundra/tundra.css" />
+        <style type="text/css">
+            body, html { font-family:helvetica,arial,sans-serif; font-size:90%; }
+			#basicFadeNode1 {opacity: 0;}
+        </style>
+
+<button dojoType="dijit.form.Button" id="basicFadeButtonIn">
+            Fade It In!
+        </button>
+        <div id="basicFadeNode1" style="width: 300px; height: 100px; background-color: red;">
+        </div>
+		
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.4/dojo/dojo.xd.js"
+    djConfig="parseOnLoad: true">
+    </script>
+<script>
+        dojo.require("dijit.form.Button");
+        function basicFadeinSetup() {
+            //Style the dom node to opacity 0;
+            //dojo.style("basicFadeNode1", "opacity", "0");
+
+            //Function linked to the button to trigger the fade.
+            function fadeIt() {
+                dojo.style("basicFadeNode1", "opacity", "0");
+                var fadeArgs = {
+                    node: "basicFadeNode1"
+                };
+                dojo.fadeIn(fadeArgs).play();
+            }
+            dojo.connect(dijit.byId("basicFadeButtonIn"), "onClick", fadeIt);
+        }
+        dojo.addOnLoad(basicFadeinSetup);
+    </script>
+	</body>
+	</html>

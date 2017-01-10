@@ -1,0 +1,178 @@
+<html>
+<head>
+<title>Stuff</title>
+
+
+<link rel="stylesheet" type="text/css" href="dijit/themes/tundra/tundra.css"/>
+<script type="text/javascript"
+djConfig="parseOnLoad: true, isDebug: true"src="dojo/dojo.js">
+</script>
+
+
+
+        <style type="text/css">
+            body, html { font-family:helvetica,arial,sans-serif; font-size:90%; }
+        </style>
+
+<style type="text/css">
+  
+  #Pfolder {
+    background: #fff;
+    border: 1px solid black;
+    padding:8px;
+	width: 380px;
+  }
+  #Phandle {
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid black;
+  }
+  #moveable2 {
+    position: absolute;
+    background: #fff;
+    width:  200px;
+    height: 200px;
+    left: 100px;
+    top:  100px;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    border: 10px solid black;
+    cursor: pointer;
+    radius:8pt;
+    -moz-border-radius:8pt 8pt;
+  }
+  #moveable3 {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    background: #ff8;
+    color: blue;
+    font-weight: bold;
+  }
+</style>
+
+
+
+
+ 
+<script type="text/javascript">
+  dojo.require("dojo.dnd.Mover");
+  dojo.require("dojo.dnd.Moveable");
+  dojo.require("dojo.dnd.move");
+  var m1, m2;
+  var initDND = function(){
+    m1 = new dojo.dnd.Moveable("Pfolder", {handle: "Phandle"});
+    m2 = new dojo.dnd.Moveable("moveable2");
+    m3 = new dojo.dnd.Moveable("moveable3");
+
+    dojo.subscribe("/dnd/move/start", function(mover){
+      console.debug("Start move", mover);
+    });
+    dojo.subscribe("/dnd/move/stop", function(mover){
+      console.debug("Stop move", mover);
+    });
+
+    dojo.connect(m1, "onMoveStart", function(mover){
+      console.debug("Start moving m1", mover);
+    });
+    dojo.connect(m1, "onMoveStop", function(mover){
+      console.debug("Stop moving m1", mover);
+    });
+  };
+  dojo.addOnLoad(initDND);
+</script>
+
+
+<script type="text/javascript">
+    dojo.require("dijit.form.ComboBox");
+	function showEvent(theEvent) {
+		alert("Event: " + theEvent.type +
+		" for element: " + theEvent.target.nodeName);
+}
+</script>
+
+</head>
+<body class="tundra"> 
+
+<h1>Dojo Moveable test</h1>
+ <button dojoType="dijit.form.Button" id="basicFadeButtonOut">
+            Fade It Out!
+        </button>
+ <button dojoType="dijit.form.Button" id="basicFadeButtonIn">
+            Fade It In!
+        </button>
+
+<div id="Pfolder">
+<table>
+  <tr><td id="Phandle" colspan="2">You can drag the table using this handle.</td></tr>
+  <tr><td>1</td><td>Lorem ipsum dolor sit amet...</td></tr>
+  <tr><td>2</td><td>Mauris vulputate elit a risus...</td></tr>
+  <tr><td>3</td><td>Pellentesque habitant morbi tristique senectus...</td></tr>
+  <tr><td>4</td><td>Duis ac augue rhoncus neque...</td></tr>
+  <tr><td>5</td><td>Quisque egestas turpis. Sed id...</td></tr>
+  <tr><td>s</td><td>
+  
+<select dojoType="dijit.form.ComboBox"
+autocomplete="true" value="Enter a state">
+<option selected="selected">California</option>
+<option>Illinois</option>
+<option>New York</option>
+<option>Nebraska</option>
+</select><br />
+<button dojoType="dijit.form.Button" onclick="showEvent">OK</button>
+<button dojoType="dijit.form.Button" onclick="showEvent">Cancel</button>
+
+	</td>
+	</tr>
+</table>
+</div>
+
+
+
+<!--<div id="moveable2">
+  <div>You can drag this whole object around.</div>
+  <div id="moveable3">You can move this paragraph. It is relatively positioned.</div>
+</div>-->
+
+
+</body>
+
+
+<script>
+        dojo.require("dijit.form.Button");
+        function basicFadeoutSetup() {
+            //Function linked to the button to trigger the fade.
+            function fadeIt() {
+                dojo.style("Pfolder", "opacity", "1");
+                var fadeArgs = {
+                    node: "Pfolder"
+                };
+                dojo.fadeOut(fadeArgs).play();
+            }
+            dojo.connect(dijit.byId("basicFadeButtonOut"), "onClick", fadeIt);
+        }
+        dojo.addOnLoad(basicFadeoutSetup);
+    </script>
+	
+	 <script>
+        dojo.require("dijit.form.Button");
+        function basicFadeinSetup() {
+            //Style the dom node to opacity 0;
+            //dojo.style("basicFadeNode1", "opacity", "0");
+
+            //Function linked to the button to trigger the fade.
+            function fadeIt() {
+                dojo.style("Pfolder", "opacity", "0");
+                var fadeArgs = {
+                    node: "Pfolder"
+                };
+                dojo.fadeIn(fadeArgs).play();
+            }
+            dojo.connect(dijit.byId("basicFadeButtonIn"), "onClick", fadeIt);
+        }
+        dojo.addOnLoad(basicFadeinSetup);
+    </script>
+	
+</html>

@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+
+body.normal {
+	background-image:url(../../backgrounds/simple-ubuntu.jpg);
+}
+body.ubu1 {background-image:url(../../backgrounds/Ubuntu_Brown_Leather_Distress.jpg);}
+a {outline:none}

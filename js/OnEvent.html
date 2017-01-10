@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Testing Ajax with Dojo</title>
+
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.4/dojo/dojo.xd.js"
+    djConfig="parseOnLoad: true">
+  <script type="text/javascript">
+    dojo.require("dojo.io.*");
+    dojo.require("dojo.event.*");
+
+    function ajaxAlert(evt) {
+
+      var ajaxArgs = {
+          url: "hello.php",
+
+          error: function(type, data, evt){
+              alert("An error occurred");
+          },
+
+          load: function(type, data, evt){
+              alert(data);
+          },
+
+          mimetype: "text/plain",
+
+          formNode: document.getElementById("myForm")
+          };
+          dojo.io.bind(ajaxArgs);
+    }
+ </script>
+
+</head>
+
+<body>
+    <form id="theForm">
+    <input type="button" id="theButton"
+     value="Press here" />
+    </form>
+
+    <script type="text/javascript">
+  var theButton = dojo.byId("theButton");
+  dojo.event.connect(theButton, "onclick", ajaxAlert);
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr">
+    
+    <head>
+        <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.4/dijit/themes/tundra/tundra.css"
+        />
+        <style type="text/css">
+            body, html { font-family:helvetica,arial,sans-serif; font-size:90%; }
+        </style>
+    </head>
+    
+    <body class=" tundra ">
+        <div id="uiContainer" style="border: 1px solid #ccc">
+        </div>
+    </body>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.4/dojo/dojo.xd.js"
+    djConfig="parseOnLoad: true">
+    </script>
+    <script type="text/javascript">
+        dojo.require("dijit.layout.BorderContainer");
+        dojo.require("dijit.layout.ContentPane");
+
+        dojo.addOnLoad(function() {
+            var outerBc = new dijit.layout.BorderContainer({
+                "design": "sidebar",
+                "style": "height: 400px;"
+            },
+            "uiContainer");
+
+            var leftSidebar = new dijit.layout.ContentPane({
+                "region": "leading",
+                "style": "width: 200px;",
+                "splitter": "true"
+            });
+            outerBc.addChild(leftSidebar);
+
+            var rightContent = new dijit.layout.BorderContainer({
+                "id": "uiContent",
+                "region": "center"
+            });
+
+            var topContent = new dijit.layout.ContentPane({
+                "region": "center",
+                "splitter": "true"
+            });
+            rightContent.addChild(topContent);
+
+            var bottomContent = new dijit.layout.ContentPane({
+                "region": "bottom",
+                "style": "height: 100px;",
+                "splitter": "true"
+            });
+            rightContent.addChild(bottomContent);
+
+            outerBc.addChild(rightContent);
+            //rightContent.startup();
+            outerBc.startup();
+        });
+    </script>
+    
+
+</html>

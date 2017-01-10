@@ -1,0 +1,306 @@
+html {overflow: hidden;}
+body { 
+	margin: 0px;
+	padding: 0px;
+	/*overflow: auto;*/
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:100%;
+	min-width: 841px;
+	
+}
+a {outline:none}
+
+
+
+
+/* temp/init styles */
+#ubuntu, #extraBuntu {
+	background-color: transparent; opacity: 1; width: 100%;
+	display: block;
+}
+.containWrap {height: inherit; position: relative; width: 100%; background-color: transparent; opacity: 1;}
+ul#square {list-style-type: none; margin: 0px; }
+ul#square li.squares {float: left; display: block; min-width:800px}
+
+.lookingGlass {overflow: hidden; min-width:841px}
+
+
+
+/* ///////////////////// panel styles general /////////////////////////// */
+.panelContainer {
+	height: 33px;
+	width: 100%;
+	display:block;
+	z-index: 104;
+}
+.panel {
+	height: 33px;
+	display:block;
+	width:100%;
+	z-index:1000;
+}
+
+
+.footerBar .panelTrayContainer {float:left; overflow:hidden; height:33px; margin-left: 5px; position:relative;}
+.footerBar .panelTray {white-space:nowrap; display:block}
+/* quickLaunch  */
+.panel .quickLaunch {
+	float: left;
+	display:block;
+	height: 33px;
+	line-height:33px;
+	font-size:0.85em;
+	font-weight:bold;
+}
+
+.panel .quickLaunch ul {list-style-type:none}
+.panel .quickLaunch li {float: left; width: 40px; line-height:1px; text-align:center;}
+.panel .quickLaunch a img {
+	border-style: none; 
+	height: 28px; 
+	padding-top: 2px;
+}
+
+/* // date and power button /// */
+.panel .rightTasks{
+	display:block;
+	float: right; 
+	height: 33px;
+	width: 236px;
+	right:0px;
+	top: 0px;
+}
+.panel .rightTasks ul {list-style-type:none; float: right;}
+.panel .rightTasks ul li {float: right;}
+.panel .rightTasks span.dateZone {
+	float: right; 
+	display: block; 
+	height: 33px;
+	overflow: hidden; 
+	line-height: 33px; 
+	font-size: 0.85em;
+	margin-right: 8px;
+}
+.panel .rightTasks a {float: right;}
+.panel .rightTasks a img {
+	border-style: none; 
+	height: 22px; 
+	padding-top: 5px; 
+	margin-right:4px;
+}
+
+.datepicker {z-index: 99997}
+
+/* ///////////////////// footer panel styles /////////////////////////// */
+.footerBarContainer {height: 35px; width: 100%; }
+.footerBar {height: 33px; margin-top: 2px;}
+.footerBar  a {display: block; float: left}
+.footerBar .panelMisc a img, .panelTray a img {border-style: none;}
+
+/* colons ? */
+.footerBar .panelMisc {display: block; float: left;}
+.footerBar .panelMisc span.colons {height: 28px; font-size: 0.5em; display: block; float: left; width: 25px; text-indent: 10px;}
+.footerBar .panelMisc span.colons p { margin-bottom: 0px; margin-top: 0px; }
+.footerBar .mainMenu {position:absolute; bottom: 0px; left:0px; background:#eee; border: 2px solid #aaa; height:300px; width: 170px;}
+/* show desktop */
+.footerBar .desk span.windows {
+	float: left; display: block;
+	height: 33px;
+	overflow-y:scoll;
+	overflow-x:hidden;
+	}
+.footerBar  a.desktop {margin-top: 3px}
+
+/* tray icons */
+.footerBar .panelTray {padding-left: 10px}
+.footerBar .panelTray a  {
+	width: 148px;
+	height: 23px;
+	margin-top: 5px;
+	float: left;
+	display: block;
+}
+
+.footerBar .arrowLeft, .footerBar .arrowRight {
+	display: none;
+	width: 10px; 
+	height: 33px;
+	background: #000;
+	color: #fff;
+	line-height:33px;
+	text-align:center;
+	position: absolute; 
+	top: 0px;
+	
+}
+.footerBar .arrowLeft {
+	left: 0px;	
+}
+.footerBar .arrowRight {
+	right: 0px;	
+}
+.footerBar .panelTrayContainer.overFlowed .arrowLeft, .footerBar .panelTrayContainer.overFlowed .arrowRight {
+	display: block;
+}
+
+.footerBar .panelTray a span.panelImg {display: block; float: left; width: 25px;}
+.footerBar .panelTray a span.panelName{display: block; float: left; }
+
+.windowSwitchDiv {z-index:999999}
+.windowSwitchDiv a{
+	position: absolute; right: 0px; top:33px; height: 100%; width: 200px;
+	background-color: #000;	display:block; cursor:pointer
+}
+.windowSwitchDiv a:hover {display:none}
+
+
+
+
+/* ////////////////// start folders ////////////////// */
+.window .visualizer {}
+.window .playlist {padding: 0px; float:right; width: 205px;}
+.window .playlist .playlistScroller {height:300px; overflow:auto;}
+
+h3 {margin: 0px;}
+.window {width: 500px; height: 300px; }
+
+.window h3.topBar {height: 26px;text-align: center; position: relative; cursor: move;}
+.window .topBarIcon {position: absolute; left: 6px; top: 5px; height: 15px; width: 15px;}
+
+.window .btn { height:32px; width:32px; float:left; cursor:pointer; }
+.window .controls {position: absolute; right: 0px; top: 0px; height: 26px; width: 90px;}
+.window.system .controls {width: 35px}
+.window .controls a {
+	display: block;
+	float: left;
+	text-decoration: none;
+}
+
+.window .controls a.restore {display: none;}
+.window.maximized .controls a.restore {display: block;}
+.window.maximized .controls a.max {display: none;}
+
+.window .folderMenu {height: 28px; line-height:28px; }
+.window .folderMenu ul {list-style-type: none;}
+.window .folderMenu li {float: left; padding: 0px 7px;}
+
+.window .folderMenu .children li a span.folderMenuIcon {display: block; width: 17px; height:17px; float:left;margin-right: 4px; background:#999; background-repeat:no-repeat}
+.window .folderMenu .children li a span.shortcut {float: right;}
+.window .folderIcons {
+	height:	59px;
+}
+.window .folderIcons a {display:block; float:left; height:58px; margin: 0px 0px 0px 0px;}
+.window .folderIcons ul {list-style-type: none}	
+.window .folderIcons li {float: left; height: 57px; padding:0px;}
+
+.window .folderTrail ul {list-style-type:none}
+.window .folderTrail li {float: left;margin: 4px 0px 4px 0px;}
+.window .folderTrail li a {	
+	height: 29px;
+	padding: 0px 5px 0px 5px;
+	display:inline-block;
+	margin: 0px 3px 0px 3px;
+}
+
+.window .folderArea {
+	margin: 3px;
+	overflow:hidden;
+}
+.window .folderArea .ui-resizable-handle  {display: none!important;}
+.window.maximized .ui-resizable-handle  {display: none!important;}
+
+.window .folderSideBar {float: left; width: 120px;}
+
+.window .folderContent {
+	margin-left: 128px; 
+	overflow: auto;
+	height: 300px;
+	width: 552px;
+}
+.window .folderStatusBar {
+	height: 15px; line-height:15px; padding:0; margin: 0px; font-size:0.7em;	
+	text-indent: 5px; 
+}
+.window .places {	
+	
+}
+.window .placeText {float: left; text-indent: 5px; background-color:#eee; width: 80%; 
+border: 1px solid #555; margin: 3px; height: 16px; line-height:16px; padding: 0px; font-size: 13px; margin-top: 7px;}
+.window .exPlace {float: right; margin-right: 0px;  border-left: 1px solid #555; 
+ width: 16px; background-color:#ddd; background-repeat:no-repeat; height:16px;
+}
+.window .exPlace a {
+	background-image:url(../../images/arrows-ffffff.png);
+	background-position:-1px 12px;
+	float: right;
+	width: 10px; 
+	height:10px;
+	margin-top: 2px;
+	margin-right:3px;
+}
+.window .placeTitle {display: block;
+	height: 32px;
+	line-height:32px;
+}
+
+.window .placeMode {clear: both}
+.window .placeMode ul {list-style-type:none}
+.window .placeMode li {float: left; height: display:block; width: 100%; background-color:#fff; margin-bottom:1px;}
+.window .placeMode li a {height: 25px; display:block; line-height:25px; text-indent: 28px; background-repeat:no-repeat;background-position:left center;}
+.window .placeMode li a.folder {background-image:url(../../images/Menufolder.png);}
+
+.window .treeMode {clear:both}
+
+.window .divider {height:1px; border-top: 1px solid #999; margin: 5px 2px 5px 2px;}
+
+.window .folderMenu li {position:relative; cursor:default}
+.window .folderMenu li.activeMenu {
+	background-color: #ccc; 
+	-moz-border-radius: 4px 4px 0px 0px;
+	border-radius:4px 4px 0px 0px;
+	height: 25px; 
+	margin-top:2px;
+	line-height:25px;
+	/*
+	background-image:url("../../images/folderTop.png");
+	background-position: 0px 4px;
+	*/
+}
+.window ul.children {
+	position: absolute;
+	top: 27px; left: -1px;
+	width: 160px;
+	z-index: 888;
+}
+
+.window ul.children li {display:block; width: 160px; padding: 0px;   }
+.window ul.children li a {display:block; text-decoration:none;  height:15px; line-height:15px;}
+.window .loading {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height:100%;
+	background:#ddd;
+	border: 0px solid #aaa;
+	padding-top: 25%;
+	text-align:center
+}
+#imageBox {height:420px; width: 515px; position:absolute; top: 50px; left: 50px; padding: 0px;}
+#imageBox div.imageSource {background:#fff; margin: 3px; border: 1px solid #000; height:351px; text-align:center; overflow:hidden;}
+#imageBox div.imageSourc img {height:200px}
+#imageBox div.imageSource .ui-icon {display:none!important}
+
+#imageBox .pictureControls {padding: 0px 5px; text-align:center;}
+#imageBox .pictureControls button {height: 30px; line-height:30px}
+#imageBox .pictureControls .ui-button .ui-button-text{line-height:19px}
+	
+/* ////////////////// end folders ////////////////// */
+
+
+.tabs ul {list-style-type:none; margin: 0; padding: 0;}
+.tabs li {float: left; margin: 0px 2px 0px 3px;}
+
+.wysiwyg-dialog-modal-div {z-index:999998}
+.wysiwyg-dialog {z-index: 999999}
+.datepicker {position:absolute; top: 40px; left:-93px;}

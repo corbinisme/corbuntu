@@ -1,0 +1,87 @@
+html {overflow: hidden}
+
+div, a, span {behavior: url(css/iepngfix.htc);}
+span img {behavior: url(css/iepngfix.htc);}
+#panel #nav ul.MenuBarHorizontal ul li {font-size: 0.85em}
+#panel #nav ul.MenuBarHorizontal a span.over {
+	float: left;
+	
+}
+#panel #nav ul.MenuBarHorizontal ul {}
+
+
+
+#Pfolder span#PedgeL {
+	background-image:url(../images/folderEdgeL.png);
+	background-repeat: no-repeat;
+	width: 8px;
+	display: block; 
+	float: left;
+	
+}
+
+#Pfolder span#PcontrolZone {
+	width: 82px;
+	background-image:url(../images/folderTop.png);
+	height: 26px;
+	display: block;
+	background-repeat: no-repeat;
+}
+#Pfolder span#PcontrolZone.normal {
+	float: left;
+	height: 26px;
+	}
+	
+#Pfolder span#PcontrolZone a {
+	display: block;
+	height: 26px;
+	padding-top: 0px;
+	float: left;
+	text-decoration: none;
+	max-width: 28px;
+}
+#Pfolder span#PcontrolZone a.min {
+	height: 26px;
+	width: 27px;
+	background-image:url(../images/folderControlsMin.png);
+	}
+#Pfolder span#PcontrolZone a.min:hover {
+	height: 26px;
+	width: 27px;
+	background-image:url(../images/folderControlsMinOver.png);
+	}
+
+#Pfolder span#PcontrolZone a.max{
+	height: 26px;
+	width: 28px;
+	background-image:url(../images/folderControlsMax.png);
+}
+
+#Pfolder span#PcontrolZone a.max:hover{
+	height: 26px;
+	width: 28px;
+	background-image:url(../images/folderControlsMaxOver.png);
+}
+	
+#Pfolder span#PcontrolZone a.close{
+	height: 26px;
+	width: 27px;
+	background-image:url(../images/folderControlsClose.png);
+}
+#Pfolder span#PcontrolZone a.close:hover{
+	width: 27px;
+	height: 26px;
+	background-image:url(../images/folderControlsCloseOver.png);
+}
+
+
+#Pfolder span#PedgeR {
+	background-image:url(../images/folderEdgeR.png);
+	background-repeat: no-repeat;
+	width: 8px;
+
+}
+#Pfolder span#PedgeR.normal {
+	float: left;
+	
+	}

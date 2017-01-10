@@ -1,0 +1,419 @@
+
+
+/* ///// normal folder //// */
+#Mfolder {
+	position: absolute;
+	top: 60px;
+	left: 350px;
+	min-width: 600px;
+	height: 500px;
+	width: 883px;
+	z-index: 103;
+	display: none;
+	
+}
+#Mfolder div#Mhandle {display: block; height: 26px; position: relative; width: 883px;}
+#Mfolder span {
+	display: block;
+	float: left;
+	height: 26px;
+	}
+#Mfolder span#MedgeL {
+	background-image:url(../images/folderEdgeL.png);
+	background-repeat: no-repeat;
+	width: 8px;
+	display: block; 
+	float: left;
+}
+
+#Mfolder span#MiconZone {
+	background-image:url(../images/folderTop.png);
+	background-repeat: repeat-x;
+	width: 82px;
+	float: left;
+}
+#Mfolder span#MiconZone img.icon {
+	padding-top: 5px;
+}
+#Mfolder span#MtitleZone {
+	background-image:url(../images/folderTop.png);
+	background-repeat: repeat-x;
+	text-align: center;
+	color: #eee;
+	font-weight: bold;
+	line-height: 26px;
+	float: left;
+}
+
+#Mfolder span#MtitleZone  span{
+	float: none;
+	position: absolute;
+	top: 0px;
+	height: 26px;
+}
+
+#Mfolder span#MtitleZone  span.over{
+	left: 46.9%;
+	line-height: 26px;
+	}
+#Mfolder span#MtitleZone  span.under{
+	left: 47%;
+	line-height: 28px;
+	color: #222;
+	}
+
+	
+	
+#Mfolder span#MtitleZone.normal {
+	width: 700px;
+	}
+
+	
+/* controls */
+#Mfolder span#McontrolZone {
+	width: 82px;
+	background-image:url(../images/folderTop.png);
+}
+#Mfolder span#McontrolZone.normal {
+	float: left;
+	}
+	
+#Mfolder span#McontrolZone a {
+	display: block;
+	height: 26px;
+	padding-top: 0px;
+	float: left;
+	text-decoration: none;
+}
+#Mfolder span#McontrolZone a.min {
+	width: 27px;
+	background-image:url(../images/folderControlsMin.png);
+	}
+#Mfolder span#McontrolZone a.min:hover {
+	width: 27px;
+	background-image:url(../images/folderControlsMinOver.png);
+	}
+
+#Mfolder span#McontrolZone a.max{
+	width: 28px;
+	background-image:url(../images/folderControlsMax.png);
+}
+
+#Mfolder span#McontrolZone a.max:hover{
+	width: 28px;
+	background-image:url(../images/folderControlsMaxOver.png);
+}
+	
+#Mfolder span#McontrolZone a.close{
+	width: 27px;
+	background-image:url(../images/folderControlsClose.png);
+}
+#Mfolder span#McontrolZone a.close:hover{
+	width: 27px;
+	background-image:url(../images/folderControlsCloseOver.png);
+}
+
+/* edge */
+#Mfolder span#MedgeR {
+	background-image:url(../images/folderEdgeR.png);
+	background-repeat: no-repeat;
+	width: 8px;
+}
+#Mfolder span#MedgeR.normal {
+	float: left
+	}
+
+
+
+/* //////////// file commands ////////////////////////*/
+
+#Mfolder div#MfolderInside {width: 889px}
+#Mfolder div#MfolderInside div#MleftEdge {
+	height: 510px;
+	width: 5px;
+	background-image:url(../images/folderSideL.png);
+	float: left;
+}
+
+#Mfolder div#MfolderInside div#Mreality  {
+	height: 510px;
+	width: 870px;
+	float: left;
+	background-color: #eee;
+}
+
+#Mfolder div#MfolderInside div#MrightEdge {
+	height: 510px;
+	width: 5px;
+	background-image:url(../images/folderSideR.png);
+}
+#Mfolder div#MfolderInside div#MrightEdge.normal {
+	float: left;
+	}
+
+
+
+#Mfolder div#MfileCommands {
+	display: block;
+}
+
+/*// folder file top ///*/
+#Mfolder div#MfileCommands div#MfileTop {
+	height: 28px;
+	background-color: #eee;
+}
+
+
+#Mfolder div#MfileCommands div#MfileTop div#Mtruth{
+	height: 28px;
+	width: 590px;
+	background-image:url(../images/folderFileTop.png);
+	float: left;
+	text-indent: 15px;
+	line-height: 28px;
+}
+#Mfolder div#MfileCommands div#MfileTop div#Mtruth.normal{
+	width: 870px;
+	}
+
+
+
+
+/*// folder file mid ///*/
+#Mfolder div#MfileCommands div#MfileMid{
+	height: 57px;
+	background-color: #eee;
+}
+
+#Mfolder div#MfileCommands div#MfileMid div#MtruthMid{
+	height: 57px;
+	width: 590px;
+	background-image:url(../images/folderFileMid.png);
+	float: left;
+	text-indent: 5px;
+	line-height: 57px;
+}
+#Mfolder div#MfileCommands div#MfileMid div#MtruthMid.normal{
+	width: 870px;
+	}
+#Mfolder div#MfileCommands div#MfileMid div#MtruthMid a img {border-style: none}
+#Mfolder div#MfileCommands div#MfileMid div#MtruthMid a {margin-top: 0px; font-size: 0.00001pt; display: block; float: left;}
+
+
+
+
+/*// folder file bot ///*/
+#Mfolder div#MfileCommands div#MfileBot{
+	height: 42px;
+	background-color: #eee;
+}
+
+#Mfolder div#MfileCommands div#MfileBot div#MtruthBot{
+	height: 42px;
+	width: 590px;
+	background-image:url(../images/folderFileBot.png);
+	float: left;
+	text-indent: 5px;
+	line-height: 42px;
+}
+#Mfolder div#MfileCommands div#MfileBot div#MtruthBot.normal{
+	width: 870px;
+	}
+#Mfolder span#MtitleZone {cursor:default} /* or move */
+
+
+
+
+
+
+
+
+/* /// maxinimzed / minimized folder /// */
+#Mfolder div#Mhandle span#MedgeL {}
+
+#Mfolder span#MtitleZone.max {
+	width: 100%;
+	}
+#Mfolder div#MfileCommands div#MfileTop div#Mtruth.max{
+	width: 100%;
+	}
+#Mfolder div#MfileCommands div#MfileMid div#MtruthMid.max{
+	width: 100%;
+	}
+#Mfolder div#MfileCommands div#MfileMid div#MtruthBot.max{
+	width: 100%;
+	}
+
+#Mfolder div#Mcontents div#MsideBar.max {
+	height: 900px; /* get height of browser - 26px */
+}
+#Mfolder span#MedgeR.max {
+	float: right;
+	background-image:url(../images/folderTop.png);
+	display: none;
+}
+#Mfolder span#McontrolZone.max {
+	float: right;
+	padding-right: 2px;
+}
+
+#Mfolder div#MfolderInside div#MrightEdge.max {
+	float: right;
+	}
+
+#Mfolder div#Mcontents div#MmainContent div#Mframe.max{
+	width: 898px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* //// content stuff /// */
+#Mfolder div#Mcontents {
+	border-top: 1px solid #999;
+	border-bottom: 0px solid #999;
+	height: 373px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	background-color: #fff;
+}
+#Mfolder div#Mcontents div#MsideBar {
+	display: block;
+	float: left;
+	width: 151px;
+	border-right:0px solid #eee;
+	background-color: #fff;
+}
+#Mfolder div#Mcontents div#MsideBar.normal {
+	height: 375px;
+}
+
+#Mfolder div#Mcontents div#MsideBar div.leftEdge {
+	height: 201px;
+	width: 5px;
+	background-image:url(../images/folderSideL.png);
+	float: left;
+}
+#Mfolder div#Mcontents div#MsideBar div#tree {
+	float: left;
+	width:148px;
+	height: 201px;
+	background-color: #fff;
+	border-bottom: 0px solid #fff;
+	padding-bottom: 2px;
+}
+
+#Mfolder div#Mcontents div#MmainContent {
+	background-color: #fff;
+}
+
+#Mfolder div#Mcontents div#MmainContent div#Mframe {
+	float: left;
+	height: 375px;
+	background-color: #fff;
+	border-left: 2px solid #eee;
+}
+#Mfolder div#Mcontents div#MmainContent div#Mframe.normal {
+	width: 713px;
+}
+
+
+
+.pad {padding-left: 5px; padding-right: 5px;}
+.border {border-top: 1px solid #999; border-bottom: 1px solid #999;}
+
+#Mfolder div#Mfooter {
+	height: 35px;
+	border-bottom: 1px solid #000;
+	clear: both;
+}
+#Mfolder div#Mfooter div.left {
+	width: 5px;
+	background-image:url(../images/folderSideL.png);
+	float: left;
+	height: 35px;
+	display: block;
+}
+#Mfolder div#Mfooter div#Mfoot{
+	width: 870px;
+	background-color: #eee;
+	float: left;
+	height: 34px;
+	display: block;
+	border-top: 1px solid #999;
+	line-height: 30px;
+	color: #222;
+	font-size: 0.9em;
+}
+
+
+#Mfolder div#Mfooter div.right {
+	width: 5px;
+	background-image:url(../images/folderSideR.png);
+	float: left;
+	height: 35px;
+	display: block;
+	background-repeat: repeat-y;
+}
+
+
+
+#Mfolder div#Mcontents div#MsideBar div#tree {height: auto}
+#Mfolder div#Mcontents div#MsideBar div#tree a {
+	display: block;
+	width: 100%;
+	height: 33px;
+	margin-bottom: 1px;
+	text-indent: 0px;
+	line-height: 33px;
+	color: #222;
+	text-decoration:none;
+	}
+
+#Mfolder div#Mcontents div#MsideBar div#tree a.marg{
+	margin-top: 41px;
+}
+
+#Mfolder div#Mcontents div#MsideBar div#tree a:hover {
+	background-image:url(../images/panelOver.jpg);
+	}
+#Mfolder div#Mcontents div#MsideBar div#tree a.mainTree{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	background-color: #ddd;
+	text-decoration: none;
+	font-weight: bold;
+	color: #222;
+	border:1px solid #555;
+	width: 100%;
+	text-indent: 15px;
+}
+
+#Mfolder div#Mcontents div#MsideBar div#tree a.mainTree span{
+	float: right;
+	margin-right: 10px;
+	
+}
+#Mfolder div#Mcontents div#MsideBar div#tree a.mainTree:hover {
+	background-image:none;
+	background-color: #ccc;
+}
+
+#Mfolder div#Mcontents div#MsideBar div#tree a span.placesIcon {
+	display: block;
+	float: left;
+	width: 30px;
+	/*background-color: #333;*/
+	height: 33px;
+	margin-right: 4px;
+}
+#Mfolder div#Mcontents div#MsideBar div#tree a img {border-style: none}
